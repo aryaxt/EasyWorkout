@@ -12,6 +12,7 @@
 @synthesize lblReps = _lblReps;
 @synthesize lblWeight = _lblWeight;
 @synthesize lblWorkoutName = _lblWorkoutName;
+@synthesize bottomView = _bottomView;
 
 - (void)setWorkoutLog:(WorkoutLog *)log
 {

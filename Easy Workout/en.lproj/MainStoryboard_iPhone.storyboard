@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9q8-Lm-AcL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9q8-Lm-AcL">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Workout Logs View Controller - Logs-->
         <scene sceneID="O5y-em-8dx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jqp-aH-iMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="jK7-YQ-6vY" customClass="WorkoutLogsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WOE-1z-Mkc">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Din-9s-H2s">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="Din-9s-H2s">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="WorkoutLogCell" rowHeight="64" id="DNS-hy-2QW" customClass="WorkoutLogCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="64"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="WorkoutLogCell" rowHeight="50" id="DNS-hy-2QW" customClass="WorkoutLogCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" id="zJe-au-I8l">
-                                                    <rect key="frame" x="0.0" y="43" width="320" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="0.0" y="30" width="320" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weight:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Q3H-X3-q7j">
-                                                            <rect key="frame" x="15" y="-2" width="42" height="21"/>
+                                                            <rect key="frame" x="13" y="-2" width="42" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" white="0.80537180659999996" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="6aN-KN-A4x">
-                                                            <rect key="frame" x="60" y="-2" width="42" height="21"/>
+                                                            <rect key="frame" x="58" y="-2" width="42" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" white="0.80537180659999996" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reps:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="FcY-dm-jrW">
                                                             <rect key="frame" x="162" y="-2" width="42" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" white="0.80537180659999996" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IV8-8s-t26">
                                                             <rect key="frame" x="205" y="-2" width="42" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" white="0.80537180659999996" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.80537180656934315" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Workout Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hFz-hK-Jmk">
-                                                    <rect key="frame" x="12" y="11" width="297" height="21"/>
+                                                    <rect key="frame" x="12" y="5" width="297" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -72,6 +72,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
+                                            <outlet property="bottomView" destination="zJe-au-I8l" id="Opq-GG-rTa"/>
                                             <outlet property="lblReps" destination="IV8-8s-t26" id="FIH-LQ-f6V"/>
                                             <outlet property="lblWeight" destination="6aN-KN-A4x" id="z9b-1y-qLg"/>
                                             <outlet property="lblWorkoutName" destination="hFz-hK-Jmk" id="KNF-aX-LSy"/>
@@ -98,13 +99,13 @@
                         <outlet property="tableView" destination="Din-9s-H2s" id="I5U-cn-ra2"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jqp-aH-iMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052" y="942"/>
         </scene>
         <!--Workout Log Detail View Controller-->
         <scene sceneID="Y5g-FB-jnI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="teE-dA-VRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="WorkoutLogDetailViewController" id="9MQ-Tf-T5i" customClass="WorkoutLogDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h4h-3x-PEo">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -187,13 +188,13 @@
                         <outlet property="weightStepper" destination="QUp-h7-0ID" id="xxI-rq-uaH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teE-dA-VRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052" y="1516"/>
         </scene>
         <!--Add Workout Log View Controller-->
         <scene sceneID="cpt-9X-0lI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SaR-5S-ZgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="gLh-5J-HH8" customClass="AddWorkoutLogViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2aW-aV-RJw">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -253,13 +254,13 @@
                         <outlet property="tableView" destination="2jt-Vn-Ewb" id="LZQ-oF-ogV"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SaR-5S-ZgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1420" y="942"/>
         </scene>
         <!--Navigation Controller - Groups-->
         <scene sceneID="22f-Za-dP6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U2K-HH-2oF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="6qB-WA-uBG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Groups" id="oTE-hy-To5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UkU-77-3hp">
@@ -269,13 +270,13 @@
                         <segue destination="VLG-Pr-IPZ" kind="relationship" relationship="rootViewController" id="8EJ-dr-6AK"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2K-HH-2oF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="640" y="365"/>
         </scene>
         <!--Workout Groups View Controller - Workout Groups-->
         <scene sceneID="PzD-Bk-dfM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SCJ-Jb-2YB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="VLG-Pr-IPZ" customClass="WorkoutGroupsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZjQ-Gn-Wra">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -325,13 +326,13 @@
                         <outlet property="tableView" destination="pHt-bs-WW6" id="ygO-9l-k5P"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SCJ-Jb-2YB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052" y="365"/>
         </scene>
         <!--Add Wrokout Group View Controller-->
         <scene sceneID="Vg5-iZ-OcF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o0g-jJ-4ja" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="s0u-Vh-gty" customClass="AddWrokoutGroupViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gEy-jt-d8J">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -405,13 +406,13 @@
                         <outlet property="txtGroupName" destination="EjH-pr-wUv" id="cPn-tT-jbK"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0g-jJ-4ja" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1420" y="365"/>
         </scene>
         <!--Navigation Controller - Workouts-->
         <scene sceneID="dVs-oA-6RD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qlZ-ye-qab" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="SCZ-6a-zN4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Workouts" id="Lty-HT-Qxx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GbZ-iZ-Sjj">
@@ -421,13 +422,13 @@
                         <segue destination="QbE-L0-ejh" kind="relationship" relationship="rootViewController" id="oWw-X9-Py0"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlZ-ye-qab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="640" y="-206"/>
         </scene>
         <!--Workouts View Controller - Workout-->
         <scene sceneID="K2j-t7-NFP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8cH-dO-rOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Workout" id="QbE-L0-ejh" customClass="WorkoutsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WKP-UF-psf">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -477,13 +478,13 @@
                         <outlet property="tableView" destination="kO2-1Z-3Us" id="ey6-ei-b6O"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8cH-dO-rOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052" y="-206"/>
         </scene>
         <!--Add Workout View Controller - Add Workout-->
         <scene sceneID="Mtf-Z7-eQt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ewQ-wy-aIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Hy1-PY-YSS" customClass="AddWorkoutViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="irK-sE-OBm">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -558,13 +559,13 @@
                         <outlet property="txtWorkoutName" destination="MjK-GA-9Om" id="WP7-dm-XPb"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewQ-wy-aIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1420" y="-200"/>
         </scene>
         <!--Add Category View Controller-->
         <scene sceneID="Lg5-FZ-uCs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dnw-sG-ebl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AddCategoryViewController" id="cFf-CQ-ItM" customClass="AddCategoryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hWR-g2-kVA">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -611,13 +612,13 @@
                         <outlet property="txtName" destination="QY1-C2-HcF" id="ban-7H-rhY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnw-sG-ebl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1778" y="-194"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZtW-2e-s96">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tml-yF-0Ze" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="9q8-Lm-AcL" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="1wD-k0-FFq"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -632,13 +633,13 @@
                         <segue destination="6qB-WA-uBG" kind="relationship" relationship="viewControllers" id="Y7y-Au-aKc"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tml-yF-0Ze" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="96" y="83"/>
         </scene>
         <!--Navigation Controller - Logs-->
         <scene sceneID="EfG-wZ-IIf">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zoO-Dj-Rp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" id="Lx9-9A-xsd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Logs" id="MGw-gc-1ay"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TWk-b0-WsS">
@@ -648,6 +649,7 @@
                         <segue destination="jK7-YQ-6vY" kind="relationship" relationship="rootViewController" id="jkU-0d-9Gn"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zoO-Dj-Rp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="640" y="951"/>
         </scene>
@@ -700,6 +702,7 @@
         <class className="WorkoutLogCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutLogCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="bottomView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="lblReps" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="lblWeight" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="lblWorkoutName" candidateClass="UILabel"/>

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import	"WorkoutLog.h"
 #import	"Workout.h"
 
@@ -15,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *lblWorkoutName;
 @property (nonatomic, strong) IBOutlet UILabel *lblReps;
 @property (nonatomic, strong) IBOutlet UILabel *lblWeight;
+@property (nonatomic, strong) IBOutlet UIView *bottomView;
 
 - (void)setWorkoutLog:(WorkoutLog *)log;
 

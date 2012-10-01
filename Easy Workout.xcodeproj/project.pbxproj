@@ -225,11 +225,11 @@
 		159284671619AC8700690188 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				159284781619AC8700690188 /* Workouts */,
+				1592846F1619AC8700690188 /* Logs */,
+				1592846A1619AC8700690188 /* Groups */,
 				159284681619AC8700690188 /* BaseViewController.h */,
 				159284691619AC8700690188 /* BaseViewController.m */,
-				1592846A1619AC8700690188 /* Groups */,
-				1592846F1619AC8700690188 /* Logs */,
-				159284781619AC8700690188 /* Workouts */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
