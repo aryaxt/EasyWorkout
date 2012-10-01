@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		156D5DF21619ADC700DA84AA /* Easy WorkoutTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 156D5DED1619ADC700DA84AA /* Easy WorkoutTests-Info.plist */; };
+		156D5DF31619ADC700DA84AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 156D5DEE1619ADC700DA84AA /* InfoPlist.strings */; };
+		156D5DF41619ADC700DA84AA /* iWorkoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 156D5DF11619ADC700DA84AA /* iWorkoutTests.m */; };
+		159284851619AC8700690188 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284461619AC8700690188 /* AppDelegate.m */; };
+		159284861619AC8700690188 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592844A1619AC8700690188 /* CoreDataManager.m */; };
+		159284871619AC8700690188 /* CoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592844C1619AC8700690188 /* CoreDataModel.m */; };
+		159284881619AC8700690188 /* iWorkout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1592844D1619AC8700690188 /* iWorkout.xcdatamodeld */; };
+		159284891619AC8700690188 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284511619AC8700690188 /* Workout.m */; };
+		1592848A1619AC8700690188 /* WorkoutCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284531619AC8700690188 /* WorkoutCategory.m */; };
+		1592848B1619AC8700690188 /* WorkoutGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284551619AC8700690188 /* WorkoutGroup.m */; };
+		1592848C1619AC8700690188 /* WorkoutLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284571619AC8700690188 /* WorkoutLog.m */; };
+		1592848D1619AC8700690188 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592845A1619AC8700690188 /* NSString+Additions.m */; };
+		1592848E1619AC8700690188 /* UIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592845C1619AC8700690188 /* UIViewController+Additions.m */; };
+		1592848F1619AC8700690188 /* Easy Workout-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1592845D1619AC8700690188 /* Easy Workout-Info.plist */; };
+		159284901619AC8700690188 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1592845F1619AC8700690188 /* InfoPlist.strings */; };
+		159284911619AC8700690188 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 159284611619AC8700690188 /* MainStoryboard_iPad.storyboard */; };
+		159284921619AC8700690188 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 159284631619AC8700690188 /* MainStoryboard_iPhone.storyboard */; };
+		159284931619AC8700690188 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284651619AC8700690188 /* main.m */; };
+		159284941619AC8700690188 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284691619AC8700690188 /* BaseViewController.m */; };
+		159284951619AC8700690188 /* AddWrokoutGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592846C1619AC8700690188 /* AddWrokoutGroupViewController.m */; };
+		159284961619AC8700690188 /* WorkoutGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592846E1619AC8700690188 /* WorkoutGroupsViewController.m */; };
+		159284971619AC8700690188 /* AddWorkoutLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284711619AC8700690188 /* AddWorkoutLogViewController.m */; };
+		159284981619AC8700690188 /* WorkoutLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284731619AC8700690188 /* WorkoutLogCell.m */; };
+		159284991619AC8700690188 /* WorkoutLogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284751619AC8700690188 /* WorkoutLogDetailViewController.m */; };
+		1592849A1619AC8700690188 /* WorkoutLogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284771619AC8700690188 /* WorkoutLogsViewController.m */; };
+		1592849B1619AC8700690188 /* AddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592847A1619AC8700690188 /* AddCategoryViewController.m */; };
+		1592849C1619AC8700690188 /* AddWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592847C1619AC8700690188 /* AddWorkoutViewController.m */; };
+		1592849D1619AC8700690188 /* WorkoutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592847E1619AC8700690188 /* WorkoutsViewController.m */; };
+		15C107961617EE4100B1B9FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107951617EE4100B1B9FB /* UIKit.framework */; };
+		15C107981617EE4100B1B9FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107971617EE4100B1B9FB /* Foundation.framework */; };
+		15C1079A1617EE4100B1B9FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107991617EE4100B1B9FB /* CoreGraphics.framework */; };
+		15C107B71617EE4200B1B9FB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107B61617EE4200B1B9FB /* SenTestingKit.framework */; };
+		15C107B81617EE4200B1B9FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107951617EE4100B1B9FB /* UIKit.framework */; };
+		15C107B91617EE4200B1B9FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107971617EE4100B1B9FB /* Foundation.framework */; };
+		15C108211617EEC000B1B9FB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C108201617EEC000B1B9FB /* CoreData.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15C107BA1617EE4200B1B9FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15C107881617EE4100B1B9FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15C107901617EE4100B1B9FB;
+			remoteInfo = iWorkout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		156D5DED1619ADC700DA84AA /* Easy WorkoutTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Easy WorkoutTests-Info.plist"; sourceTree = "<group>"; };
+		156D5DEF1619ADC700DA84AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		156D5DF01619ADC700DA84AA /* iWorkoutTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iWorkoutTests.h; sourceTree = "<group>"; };
+		156D5DF11619ADC700DA84AA /* iWorkoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iWorkoutTests.m; sourceTree = "<group>"; };
+		159284451619AC8700690188 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		159284461619AC8700690188 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		159284491619AC8700690188 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		1592844A1619AC8700690188 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		1592844B1619AC8700690188 /* CoreDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataModel.h; sourceTree = "<group>"; };
+		1592844C1619AC8700690188 /* CoreDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataModel.m; sourceTree = "<group>"; };
+		1592844E1619AC8700690188 /* iWorkout.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iWorkout.xcdatamodel; sourceTree = "<group>"; };
+		159284501619AC8700690188 /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
+		159284511619AC8700690188 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
+		159284521619AC8700690188 /* WorkoutCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutCategory.h; sourceTree = "<group>"; };
+		159284531619AC8700690188 /* WorkoutCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutCategory.m; sourceTree = "<group>"; };
+		159284541619AC8700690188 /* WorkoutGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutGroup.h; sourceTree = "<group>"; };
+		159284551619AC8700690188 /* WorkoutGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutGroup.m; sourceTree = "<group>"; };
+		159284561619AC8700690188 /* WorkoutLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutLog.h; sourceTree = "<group>"; };
+		159284571619AC8700690188 /* WorkoutLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutLog.m; sourceTree = "<group>"; };
+		159284591619AC8700690188 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		1592845A1619AC8700690188 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		1592845B1619AC8700690188 /* UIViewController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Additions.h"; sourceTree = "<group>"; };
+		1592845C1619AC8700690188 /* UIViewController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Additions.m"; sourceTree = "<group>"; };
+		1592845D1619AC8700690188 /* Easy Workout-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Easy Workout-Info.plist"; sourceTree = "<group>"; };
+		1592845E1619AC8700690188 /* Easy Workout-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Easy Workout-Prefix.pch"; sourceTree = "<group>"; };
+		159284601619AC8700690188 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		159284621619AC8700690188 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		159284641619AC8700690188 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		159284651619AC8700690188 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		159284681619AC8700690188 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		159284691619AC8700690188 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		1592846B1619AC8700690188 /* AddWrokoutGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWrokoutGroupViewController.h; sourceTree = "<group>"; };
+		1592846C1619AC8700690188 /* AddWrokoutGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWrokoutGroupViewController.m; sourceTree = "<group>"; };
+		1592846D1619AC8700690188 /* WorkoutGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutGroupsViewController.h; sourceTree = "<group>"; };
+		1592846E1619AC8700690188 /* WorkoutGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutGroupsViewController.m; sourceTree = "<group>"; };
+		159284701619AC8700690188 /* AddWorkoutLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWorkoutLogViewController.h; sourceTree = "<group>"; };
+		159284711619AC8700690188 /* AddWorkoutLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWorkoutLogViewController.m; sourceTree = "<group>"; };
+		159284721619AC8700690188 /* WorkoutLogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutLogCell.h; sourceTree = "<group>"; };
+		159284731619AC8700690188 /* WorkoutLogCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutLogCell.m; sourceTree = "<group>"; };
+		159284741619AC8700690188 /* WorkoutLogDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutLogDetailViewController.h; sourceTree = "<group>"; };
+		159284751619AC8700690188 /* WorkoutLogDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutLogDetailViewController.m; sourceTree = "<group>"; };
+		159284761619AC8700690188 /* WorkoutLogsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutLogsViewController.h; sourceTree = "<group>"; };
+		159284771619AC8700690188 /* WorkoutLogsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutLogsViewController.m; sourceTree = "<group>"; };
+		159284791619AC8700690188 /* AddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCategoryViewController.h; sourceTree = "<group>"; };
+		1592847A1619AC8700690188 /* AddCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCategoryViewController.m; sourceTree = "<group>"; };
+		1592847B1619AC8700690188 /* AddWorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWorkoutViewController.h; sourceTree = "<group>"; };
+		1592847C1619AC8700690188 /* AddWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWorkoutViewController.m; sourceTree = "<group>"; };
+		1592847D1619AC8700690188 /* WorkoutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutsViewController.h; sourceTree = "<group>"; };
+		1592847E1619AC8700690188 /* WorkoutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutsViewController.m; sourceTree = "<group>"; };
+		15C107911617EE4100B1B9FB /* Easy Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15C107951617EE4100B1B9FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		15C107971617EE4100B1B9FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		15C107991617EE4100B1B9FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		15C107B51617EE4200B1B9FB /* Easy WorkoutTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Easy WorkoutTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15C107B61617EE4200B1B9FB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		15C108201617EEC000B1B9FB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15C1078E1617EE4100B1B9FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C108211617EEC000B1B9FB /* CoreData.framework in Frameworks */,
+				15C107961617EE4100B1B9FB /* UIKit.framework in Frameworks */,
+				15C107981617EE4100B1B9FB /* Foundation.framework in Frameworks */,
+				15C1079A1617EE4100B1B9FB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C107B11617EE4200B1B9FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15C107B71617EE4200B1B9FB /* SenTestingKit.framework in Frameworks */,
+				15C107B81617EE4200B1B9FB /* UIKit.framework in Frameworks */,
+				15C107B91617EE4200B1B9FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		156D5DEC1619ADC700DA84AA /* Easy WorkoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				156D5DED1619ADC700DA84AA /* Easy WorkoutTests-Info.plist */,
+				156D5DEE1619ADC700DA84AA /* InfoPlist.strings */,
+				156D5DF01619ADC700DA84AA /* iWorkoutTests.h */,
+				156D5DF11619ADC700DA84AA /* iWorkoutTests.m */,
+			);
+			path = "Easy WorkoutTests";
+			sourceTree = "<group>";
+		};
+		159284441619AC8700690188 /* Easy Workout */ = {
+			isa = PBXGroup;
+			children = (
+				159284581619AC8700690188 /* Categories */,
+				159284471619AC8700690188 /* Business & Data Layer */,
+				159284671619AC8700690188 /* Pages */,
+				159284451619AC8700690188 /* AppDelegate.h */,
+				159284461619AC8700690188 /* AppDelegate.m */,
+				1592845D1619AC8700690188 /* Easy Workout-Info.plist */,
+				1592845E1619AC8700690188 /* Easy Workout-Prefix.pch */,
+				1592845F1619AC8700690188 /* InfoPlist.strings */,
+				159284611619AC8700690188 /* MainStoryboard_iPad.storyboard */,
+				159284631619AC8700690188 /* MainStoryboard_iPhone.storyboard */,
+				159284651619AC8700690188 /* main.m */,
+				159284661619AC8700690188 /* Models */,
+			);
+			path = "Easy Workout";
+			sourceTree = "<group>";
+		};
+		159284471619AC8700690188 /* Business & Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				159284481619AC8700690188 /* Core Data */,
+				1592844F1619AC8700690188 /* Models */,
+			);
+			path = "Business & Data Layer";
+			sourceTree = "<group>";
+		};
+		159284481619AC8700690188 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				159284491619AC8700690188 /* CoreDataManager.h */,
+				1592844A1619AC8700690188 /* CoreDataManager.m */,
+				1592844B1619AC8700690188 /* CoreDataModel.h */,
+				1592844C1619AC8700690188 /* CoreDataModel.m */,
+				1592844D1619AC8700690188 /* iWorkout.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		1592844F1619AC8700690188 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				159284501619AC8700690188 /* Workout.h */,
+				159284511619AC8700690188 /* Workout.m */,
+				159284521619AC8700690188 /* WorkoutCategory.h */,
+				159284531619AC8700690188 /* WorkoutCategory.m */,
+				159284541619AC8700690188 /* WorkoutGroup.h */,
+				159284551619AC8700690188 /* WorkoutGroup.m */,
+				159284561619AC8700690188 /* WorkoutLog.h */,
+				159284571619AC8700690188 /* WorkoutLog.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		159284581619AC8700690188 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				159284591619AC8700690188 /* NSString+Additions.h */,
+				1592845A1619AC8700690188 /* NSString+Additions.m */,
+				1592845B1619AC8700690188 /* UIViewController+Additions.h */,
+				1592845C1619AC8700690188 /* UIViewController+Additions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		159284661619AC8700690188 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		159284671619AC8700690188 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				159284681619AC8700690188 /* BaseViewController.h */,
+				159284691619AC8700690188 /* BaseViewController.m */,
+				1592846A1619AC8700690188 /* Groups */,
+				1592846F1619AC8700690188 /* Logs */,
+				159284781619AC8700690188 /* Workouts */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		1592846A1619AC8700690188 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				1592846B1619AC8700690188 /* AddWrokoutGroupViewController.h */,
+				1592846C1619AC8700690188 /* AddWrokoutGroupViewController.m */,
+				1592846D1619AC8700690188 /* WorkoutGroupsViewController.h */,
+				1592846E1619AC8700690188 /* WorkoutGroupsViewController.m */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		1592846F1619AC8700690188 /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+				159284701619AC8700690188 /* AddWorkoutLogViewController.h */,
+				159284711619AC8700690188 /* AddWorkoutLogViewController.m */,
+				159284721619AC8700690188 /* WorkoutLogCell.h */,
+				159284731619AC8700690188 /* WorkoutLogCell.m */,
+				159284741619AC8700690188 /* WorkoutLogDetailViewController.h */,
+				159284751619AC8700690188 /* WorkoutLogDetailViewController.m */,
+				159284761619AC8700690188 /* WorkoutLogsViewController.h */,
+				159284771619AC8700690188 /* WorkoutLogsViewController.m */,
+			);
+			path = Logs;
+			sourceTree = "<group>";
+		};
+		159284781619AC8700690188 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				159284791619AC8700690188 /* AddCategoryViewController.h */,
+				1592847A1619AC8700690188 /* AddCategoryViewController.m */,
+				1592847B1619AC8700690188 /* AddWorkoutViewController.h */,
+				1592847C1619AC8700690188 /* AddWorkoutViewController.m */,
+				1592847D1619AC8700690188 /* WorkoutsViewController.h */,
+				1592847E1619AC8700690188 /* WorkoutsViewController.m */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
+		15C107861617EE4100B1B9FB = {
+			isa = PBXGroup;
+			children = (
+				159284441619AC8700690188 /* Easy Workout */,
+				156D5DEC1619ADC700DA84AA /* Easy WorkoutTests */,
+				15C107941617EE4100B1B9FB /* Frameworks */,
+				15C107921617EE4100B1B9FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15C107921617EE4100B1B9FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15C107911617EE4100B1B9FB /* Easy Workout.app */,
+				15C107B51617EE4200B1B9FB /* Easy WorkoutTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15C107941617EE4100B1B9FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15C108201617EEC000B1B9FB /* CoreData.framework */,
+				15C107951617EE4100B1B9FB /* UIKit.framework */,
+				15C107971617EE4100B1B9FB /* Foundation.framework */,
+				15C107991617EE4100B1B9FB /* CoreGraphics.framework */,
+				15C107B61617EE4200B1B9FB /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15C107901617EE4100B1B9FB /* Easy Workout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15C107C71617EE4200B1B9FB /* Build configuration list for PBXNativeTarget "Easy Workout" */;
+			buildPhases = (
+				15C1078D1617EE4100B1B9FB /* Sources */,
+				15C1078E1617EE4100B1B9FB /* Frameworks */,
+				15C1078F1617EE4100B1B9FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Easy Workout";
+			productName = iWorkout;
+			productReference = 15C107911617EE4100B1B9FB /* Easy Workout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15C107B41617EE4200B1B9FB /* Easy WorkoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15C107CA1617EE4200B1B9FB /* Build configuration list for PBXNativeTarget "Easy WorkoutTests" */;
+			buildPhases = (
+				15C107B01617EE4200B1B9FB /* Sources */,
+				15C107B11617EE4200B1B9FB /* Frameworks */,
+				15C107B21617EE4200B1B9FB /* Resources */,
+				15C107B31617EE4200B1B9FB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15C107BB1617EE4200B1B9FB /* PBXTargetDependency */,
+			);
+			name = "Easy WorkoutTests";
+			productName = iWorkoutTests;
+			productReference = 15C107B51617EE4200B1B9FB /* Easy WorkoutTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15C107881617EE4100B1B9FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Aryan Gh";
+			};
+			buildConfigurationList = 15C1078B1617EE4100B1B9FB /* Build configuration list for PBXProject "Easy Workout" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 15C107861617EE4100B1B9FB;
+			productRefGroup = 15C107921617EE4100B1B9FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15C107901617EE4100B1B9FB /* Easy Workout */,
+				15C107B41617EE4200B1B9FB /* Easy WorkoutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15C1078F1617EE4100B1B9FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1592848F1619AC8700690188 /* Easy Workout-Info.plist in Resources */,
+				159284901619AC8700690188 /* InfoPlist.strings in Resources */,
+				159284911619AC8700690188 /* MainStoryboard_iPad.storyboard in Resources */,
+				159284921619AC8700690188 /* MainStoryboard_iPhone.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C107B21617EE4200B1B9FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				156D5DF21619ADC700DA84AA /* Easy WorkoutTests-Info.plist in Resources */,
+				156D5DF31619ADC700DA84AA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15C107B31617EE4200B1B9FB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15C1078D1617EE4100B1B9FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				159284851619AC8700690188 /* AppDelegate.m in Sources */,
+				159284861619AC8700690188 /* CoreDataManager.m in Sources */,
+				159284871619AC8700690188 /* CoreDataModel.m in Sources */,
+				159284881619AC8700690188 /* iWorkout.xcdatamodeld in Sources */,
+				159284891619AC8700690188 /* Workout.m in Sources */,
+				1592848A1619AC8700690188 /* WorkoutCategory.m in Sources */,
+				1592848B1619AC8700690188 /* WorkoutGroup.m in Sources */,
+				1592848C1619AC8700690188 /* WorkoutLog.m in Sources */,
+				1592848D1619AC8700690188 /* NSString+Additions.m in Sources */,
+				1592848E1619AC8700690188 /* UIViewController+Additions.m in Sources */,
+				159284931619AC8700690188 /* main.m in Sources */,
+				159284941619AC8700690188 /* BaseViewController.m in Sources */,
+				159284951619AC8700690188 /* AddWrokoutGroupViewController.m in Sources */,
+				159284961619AC8700690188 /* WorkoutGroupsViewController.m in Sources */,
+				159284971619AC8700690188 /* AddWorkoutLogViewController.m in Sources */,
+				159284981619AC8700690188 /* WorkoutLogCell.m in Sources */,
+				159284991619AC8700690188 /* WorkoutLogDetailViewController.m in Sources */,
+				1592849A1619AC8700690188 /* WorkoutLogsViewController.m in Sources */,
+				1592849B1619AC8700690188 /* AddCategoryViewController.m in Sources */,
+				1592849C1619AC8700690188 /* AddWorkoutViewController.m in Sources */,
+				1592849D1619AC8700690188 /* WorkoutsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15C107B01617EE4200B1B9FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				156D5DF41619ADC700DA84AA /* iWorkoutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15C107BB1617EE4200B1B9FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15C107901617EE4100B1B9FB /* Easy Workout */;
+			targetProxy = 15C107BA1617EE4200B1B9FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		156D5DEE1619ADC700DA84AA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				156D5DEF1619ADC700DA84AA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1592845F1619AC8700690188 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				159284601619AC8700690188 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		159284611619AC8700690188 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				159284621619AC8700690188 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		159284631619AC8700690188 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				159284641619AC8700690188 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15C107C51617EE4200B1B9FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15C107C61617EE4200B1B9FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15C107C81617EE4200B1B9FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Easy Workout/Easy Workout-Prefix.pch";
+				INFOPLIST_FILE = "Easy Workout/Easy Workout-Info.plist";
+				PRODUCT_NAME = "Easy Workout";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		15C107C91617EE4200B1B9FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Easy Workout/Easy Workout-Prefix.pch";
+				INFOPLIST_FILE = "Easy Workout/Easy Workout-Info.plist";
+				PRODUCT_NAME = "Easy Workout";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		15C107CB1617EE4200B1B9FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iWorkout.app/iWorkout";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iWorkout/iWorkout-Prefix.pch";
+				INFOPLIST_FILE = "iWorkoutTests/Easy WorkoutTests-Info.plist";
+				PRODUCT_NAME = "Easy WorkoutTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		15C107CC1617EE4200B1B9FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iWorkout.app/iWorkout";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iWorkout/iWorkout-Prefix.pch";
+				INFOPLIST_FILE = "iWorkoutTests/Easy WorkoutTests-Info.plist";
+				PRODUCT_NAME = "Easy WorkoutTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15C1078B1617EE4100B1B9FB /* Build configuration list for PBXProject "Easy Workout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15C107C51617EE4200B1B9FB /* Debug */,
+				15C107C61617EE4200B1B9FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15C107C71617EE4200B1B9FB /* Build configuration list for PBXNativeTarget "Easy Workout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15C107C81617EE4200B1B9FB /* Debug */,
+				15C107C91617EE4200B1B9FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15C107CA1617EE4200B1B9FB /* Build configuration list for PBXNativeTarget "Easy WorkoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15C107CB1617EE4200B1B9FB /* Debug */,
+				15C107CC1617EE4200B1B9FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1592844D1619AC8700690188 /* iWorkout.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1592844E1619AC8700690188 /* iWorkout.xcdatamodel */,
+			);
+			currentVersion = 1592844E1619AC8700690188 /* iWorkout.xcdatamodel */;
+			path = iWorkout.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 15C107881617EE4100B1B9FB /* Project object */;
+}

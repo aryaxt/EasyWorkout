@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="9q8-Lm-AcL">
+    <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+    </dependencies>
+    <scenes>
+        <!--Workout Logs View Controller - Logs-->
+        <scene sceneID="O5y-em-8dx">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jqp-aH-iMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="jK7-YQ-6vY" customClass="WorkoutLogsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WOE-1z-Mkc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Din-9s-H2s">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="WorkoutLogCell" rowHeight="64" id="DNS-hy-2QW" customClass="WorkoutLogCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="zJe-au-I8l">
+                                                    <rect key="frame" x="0.0" y="43" width="320" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weight:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Q3H-X3-q7j">
+                                                            <rect key="frame" x="15" y="-2" width="42" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="6aN-KN-A4x">
+                                                            <rect key="frame" x="60" y="-2" width="42" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reps:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="FcY-dm-jrW">
+                                                            <rect key="frame" x="162" y="-2" width="42" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="IV8-8s-t26">
+                                                            <rect key="frame" x="205" y="-2" width="42" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.80537180656934315" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Workout Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hFz-hK-Jmk">
+                                                    <rect key="frame" x="12" y="11" width="297" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="lblReps" destination="IV8-8s-t26" id="FIH-LQ-f6V"/>
+                                            <outlet property="lblWeight" destination="6aN-KN-A4x" id="z9b-1y-qLg"/>
+                                            <outlet property="lblWorkoutName" destination="hFz-hK-Jmk" id="KNF-aX-LSy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jK7-YQ-6vY" id="mpX-ok-Irb"/>
+                                    <outlet property="delegate" destination="jK7-YQ-6vY" id="80i-B0-0wX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Logs" id="v9X-d8-M6a"/>
+                    <navigationItem key="navigationItem" title="Logs" id="F5x-Q1-0bJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ALt-cd-7cn">
+                            <connections>
+                                <segue destination="gLh-5J-HH8" kind="modal" identifier="AddWorkoutLogViewControllerSegue" id="TkU-7a-0AP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Din-9s-H2s" id="I5U-cn-ra2"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1052" y="942"/>
+        </scene>
+        <!--Workout Log Detail View Controller-->
+        <scene sceneID="Y5g-FB-jnI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teE-dA-VRX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="WorkoutLogDetailViewController" id="9MQ-Tf-T5i" customClass="WorkoutLogDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h4h-3x-PEo">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="wEJ-bn-pgi">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Name" id="of2-aI-395">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="deV-KO-Boo">
+                                            <connections>
+                                                <action selector="cancelSelected:" destination="9MQ-Tf-T5i" id="s6V-fL-BM8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="BVQ-0Q-B2G">
+                                            <connections>
+                                                <action selector="doneSelected:" destination="9MQ-Tf-T5i" id="Ze2-lZ-HFn"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="Ota-4L-z8M">
+                                <rect key="frame" x="184" y="72" width="94" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="repStepperDidChange:" destination="9MQ-Tf-T5i" eventType="valueChanged" id="yyJ-7Q-ZzF"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Reps:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="vic-7h-pCa">
+                                <rect key="frame" x="35" y="75" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ucV-zZ-JXV">
+                                <rect key="frame" x="92" y="70" width="75" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="textFieldDidChangeValue:" destination="9MQ-Tf-T5i" eventType="editingChanged" id="GWS-wP-jts"/>
+                                    <outlet property="delegate" destination="9MQ-Tf-T5i" id="eZa-xB-Iax"/>
+                                </connections>
+                            </textField>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1000" stepValue="5" id="QUp-h7-0ID">
+                                <rect key="frame" x="184" y="127" width="94" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="weightStepperDidChange:" destination="9MQ-Tf-T5i" eventType="valueChanged" id="aqE-gb-Frf"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weight:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="rHF-ye-Mlw">
+                                <rect key="frame" x="35" y="130" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="e3o-dC-G1Q">
+                                <rect key="frame" x="92" y="125" width="75" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="textFieldDidChangeValue:" destination="9MQ-Tf-T5i" eventType="editingChanged" id="00G-Xg-LsK"/>
+                                    <action selector="textFieldDidChangeValue:" destination="9MQ-Tf-T5i" eventType="valueChanged" id="xsY-en-yT2"/>
+                                    <outlet property="delegate" destination="9MQ-Tf-T5i" id="07o-5x-259"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="repStepper" destination="Ota-4L-z8M" id="uzD-9E-BqZ"/>
+                        <outlet property="txtRep" destination="ucV-zZ-JXV" id="2Mh-82-9lf"/>
+                        <outlet property="txtWeight" destination="e3o-dC-G1Q" id="vdn-3v-1Yb"/>
+                        <outlet property="weightStepper" destination="QUp-h7-0ID" id="xxI-rq-uaH"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1052" y="1516"/>
+        </scene>
+        <!--Add Workout Log View Controller-->
+        <scene sceneID="cpt-9X-0lI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SaR-5S-ZgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="gLh-5J-HH8" customClass="AddWorkoutLogViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2aW-aV-RJw">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2jt-Vn-Ewb">
+                                <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="AddWorkoutLogCell" textLabel="8s3-ds-cn7" style="IBUITableViewCellStyleDefault" id="8Ze-N9-pxP">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8s3-ds-cn7">
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gLh-5J-HH8" id="sCl-wv-8VV"/>
+                                    <outlet property="delegate" destination="gLh-5J-HH8" id="v2e-xN-M51"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" id="66e-Yv-bos">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Log" id="xCl-eD-M7g">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="exs-xS-33I">
+                                            <connections>
+                                                <action selector="cancelSelected:" destination="gLh-5J-HH8" id="g7r-b9-bUx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="MUq-ab-FVO">
+                                            <connections>
+                                                <action selector="addSelected:" destination="gLh-5J-HH8" id="Dnb-E2-TQb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="2jt-Vn-Ewb" id="LZQ-oF-ogV"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1420" y="942"/>
+        </scene>
+        <!--Navigation Controller - Groups-->
+        <scene sceneID="22f-Za-dP6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2K-HH-2oF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="6qB-WA-uBG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Groups" id="oTE-hy-To5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UkU-77-3hp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VLG-Pr-IPZ" kind="relationship" relationship="rootViewController" id="8EJ-dr-6AK"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="640" y="365"/>
+        </scene>
+        <!--Workout Groups View Controller - Workout Groups-->
+        <scene sceneID="PzD-Bk-dfM">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SCJ-Jb-2YB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="VLG-Pr-IPZ" customClass="WorkoutGroupsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZjQ-Gn-Wra">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pHt-bs-WW6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="WorkoutGroupCell" textLabel="8Rt-Tt-VAs" style="IBUITableViewCellStyleDefault" id="uLH-zV-e7Q">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Rt-Tt-VAs">
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VLG-Pr-IPZ" id="kIR-RC-UZc"/>
+                                    <outlet property="delegate" destination="VLG-Pr-IPZ" id="R1Y-gF-LC6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Groups" id="bii-2t-Jjb"/>
+                    <navigationItem key="navigationItem" title="Workout Groups" id="i6Z-Qs-9c6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mto-fV-nOZ">
+                            <connections>
+                                <segue destination="s0u-Vh-gty" kind="modal" id="E1I-TP-1Pk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="pHt-bs-WW6" id="ygO-9l-k5P"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1052" y="365"/>
+        </scene>
+        <!--Add Wrokout Group View Controller-->
+        <scene sceneID="Vg5-iZ-OcF">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0g-jJ-4ja" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="s0u-Vh-gty" customClass="AddWrokoutGroupViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gEy-jt-d8J">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="gma-uP-SN3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Workout Group" id="A7G-4v-Uy7">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="YqA-6I-zhK">
+                                            <connections>
+                                                <action selector="cancelSelected:" destination="s0u-Vh-gty" id="0Y2-UF-P2Q"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="iZc-ij-dWT">
+                                            <connections>
+                                                <action selector="addSelected:" destination="s0u-Vh-gty" id="iuk-5Q-Z8W"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="EjH-pr-wUv">
+                                <rect key="frame" x="85" y="64" width="202" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="GgC-ud-6wU">
+                                <rect key="frame" x="20" y="69" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oCo-4C-fpi">
+                                <rect key="frame" x="0.0" y="103" width="320" height="357"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="WorkoutGroupWorkoutCell" textLabel="EKB-Lf-yOe" style="IBUITableViewCellStyleDefault" id="hcL-SE-Cx6">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EKB-Lf-yOe">
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="s0u-Vh-gty" id="oJf-BJ-dp7"/>
+                                    <outlet property="delegate" destination="s0u-Vh-gty" id="g9M-Ge-FU0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="oCo-4C-fpi" id="AAa-Pd-o6D"/>
+                        <outlet property="txtGroupName" destination="EjH-pr-wUv" id="cPn-tT-jbK"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1420" y="365"/>
+        </scene>
+        <!--Navigation Controller - Workouts-->
+        <scene sceneID="dVs-oA-6RD">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlZ-ye-qab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="SCZ-6a-zN4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Workouts" id="Lty-HT-Qxx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GbZ-iZ-Sjj">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QbE-L0-ejh" kind="relationship" relationship="rootViewController" id="oWw-X9-Py0"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="640" y="-206"/>
+        </scene>
+        <!--Workouts View Controller - Workout-->
+        <scene sceneID="K2j-t7-NFP">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8cH-dO-rOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Workout" id="QbE-L0-ejh" customClass="WorkoutsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WKP-UF-psf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kO2-1Z-3Us">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="WorkoutCell" textLabel="KzS-L5-TxH" style="IBUITableViewCellStyleDefault" id="PAk-Pu-7Av">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KzS-L5-TxH">
+                                                    <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QbE-L0-ejh" id="3W9-6T-aGi"/>
+                                    <outlet property="delegate" destination="QbE-L0-ejh" id="hpp-qt-sgd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Workouts" id="f9K-PJ-DMp"/>
+                    <navigationItem key="navigationItem" title="Workouts" id="oSH-4L-Knv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7sD-HP-myP">
+                            <connections>
+                                <segue destination="Hy1-PY-YSS" kind="modal" id="RRY-AG-c9Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="kO2-1Z-3Us" id="ey6-ei-b6O"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-206"/>
+        </scene>
+        <!--Add Workout View Controller - Add Workout-->
+        <scene sceneID="Mtf-Z7-eQt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewQ-wy-aIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Hy1-PY-YSS" customClass="AddWorkoutViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="irK-sE-OBm">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="MjK-GA-9Om">
+                                <rect key="frame" x="118" y="87" width="161" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" id="hFF-ej-APH">
+                                <rect key="frame" x="0.0" y="244" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hy1-PY-YSS" id="T8D-mP-Ba4"/>
+                                    <outlet property="delegate" destination="Hy1-PY-YSS" id="svE-Ij-ppD"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="eb1-ix-aPr">
+                                <rect key="frame" x="28" y="87" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" id="Fg0-qa-frm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Workout" id="gUD-V8-bsP">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="9M1-lV-gV3">
+                                            <connections>
+                                                <action selector="cancelSelected:" destination="Hy1-PY-YSS" id="2tn-ER-8b4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="3VV-Kp-B8V">
+                                            <connections>
+                                                <action selector="addWorkoutSelected:" destination="Hy1-PY-YSS" id="cog-ch-FCa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DjT-ua-ZBg">
+                                <rect key="frame" x="177" y="204" width="123" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add Category">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCategorySelected:" destination="Hy1-PY-YSS" eventType="touchUpInside" id="uFt-7V-yqq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Workout" id="mAg-iJ-sNV">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="xIa-jP-qfN">
+                            <connections>
+                                <action selector="addWorkoutSelected:" destination="Hy1-PY-YSS" id="IC2-nb-l7K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pickerView" destination="hFF-ej-APH" id="jZW-vm-hcv"/>
+                        <outlet property="txtWorkoutName" destination="MjK-GA-9Om" id="WP7-dm-XPb"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1420" y="-200"/>
+        </scene>
+        <!--Add Category View Controller-->
+        <scene sceneID="Lg5-FZ-uCs">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnw-sG-ebl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="AddCategoryViewController" id="cFf-CQ-ItM" customClass="AddCategoryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hWR-g2-kVA">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="Ldm-pV-O85">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add Category" id="twu-lb-mUp">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="YpC-63-kjg">
+                                            <connections>
+                                                <action selector="cancelSelected:" destination="cFf-CQ-ItM" id="rlR-Ov-2P6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="fEE-Y5-eiP">
+                                            <connections>
+                                                <action selector="doneSelected:" destination="cFf-CQ-ItM" id="thH-GQ-78M"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="7y6-R1-Ub6">
+                                <rect key="frame" x="25" y="63" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="QY1-C2-HcF">
+                                <rect key="frame" x="92" y="58" width="200" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cFf-CQ-ItM" id="FsM-yE-XMa"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtName" destination="QY1-C2-HcF" id="ban-7H-rhY"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1778" y="-194"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZtW-2e-s96">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tml-yF-0Ze" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBarController definesPresentationContext="YES" id="9q8-Lm-AcL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1wD-k0-FFq"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bW6-1n-awo">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Lx9-9A-xsd" kind="relationship" relationship="viewControllers" id="uQf-iH-cJZ"/>
+                        <segue destination="SCZ-6a-zN4" kind="relationship" relationship="viewControllers" id="zJ7-Hw-evd"/>
+                        <segue destination="6qB-WA-uBG" kind="relationship" relationship="viewControllers" id="Y7y-Au-aKc"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="96" y="83"/>
+        </scene>
+        <!--Navigation Controller - Logs-->
+        <scene sceneID="EfG-wZ-IIf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zoO-Dj-Rp2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="Lx9-9A-xsd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Logs" id="MGw-gc-1ay"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TWk-b0-WsS">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jK7-YQ-6vY" kind="relationship" relationship="rootViewController" id="jkU-0d-9Gn"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="640" y="951"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="AddCategoryViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCategoryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelSelected:"/>
+                <relationship kind="action" name="doneSelected:"/>
+                <relationship kind="outlet" name="txtName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddWorkoutLogViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWorkoutLogViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addSelected:"/>
+                <relationship kind="action" name="cancelSelected:"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="AddWorkoutViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWorkoutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addCategorySelected:"/>
+                <relationship kind="action" name="addWorkoutSelected:"/>
+                <relationship kind="action" name="cancelSelected:"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="txtWorkoutName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddWrokoutGroupViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWrokoutGroupViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addSelected:"/>
+                <relationship kind="action" name="cancelSelected:"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="txtGroupName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="BaseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
+        </class>
+        <class className="WorkoutGroupsViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutGroupsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WorkoutLogCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutLogCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="lblReps" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblWeight" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblWorkoutName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="WorkoutLogDetailViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutLogDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelSelected:"/>
+                <relationship kind="action" name="doneSelected:"/>
+                <relationship kind="action" name="repStepperDidChange:"/>
+                <relationship kind="action" name="textFieldDidChangeValue:"/>
+                <relationship kind="action" name="weightStepperDidChange:"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="repStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="txtRep" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtWeight" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="weightStepper" candidateClass="UIStepper"/>
+            </relationships>
+        </class>
+        <class className="WorkoutLogsViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutLogsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WorkoutsViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
