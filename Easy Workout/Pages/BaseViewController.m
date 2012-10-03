@@ -58,7 +58,7 @@ static CGFloat ANIMATION_DURATION = .35;
 	
 	self.formSheetViewConotrller.view.layer.cornerRadius = 5;
 	self.formSheetViewConotrller.view.clipsToBounds = YES;
-	self.formSheetViewConotrller.view.layer.borderColor = [UIColor lightGrayColor].CGColor;
+	self.formSheetViewConotrller.view.layer.borderColor = [UIColor darkGrayColor].CGColor;
 	self.formSheetViewConotrller.view.layer.borderWidth = 2;
 	
 	__block CGRect rect = CGRectMake((320-FORMSHEET_WITH)/2, 500, FORMSHEET_WITH, FORMSHEET_HEIGHT);

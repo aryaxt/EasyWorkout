@@ -14,6 +14,12 @@
 @synthesize lblWorkoutName = _lblWorkoutName;
 @synthesize bottomView = _bottomView;
 
+- (void)awakeFromNib
+{
+	self.bottomView.layer.borderWidth = 1;
+	self.bottomView.layer.borderColor = [UIColor blackColor].CGColor;
+}
+
 - (void)setWorkoutLog:(WorkoutLog *)log
 {
 	self.lblWorkoutName.text = log.workout.name;

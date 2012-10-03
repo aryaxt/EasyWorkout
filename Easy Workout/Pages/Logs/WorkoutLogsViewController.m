@@ -127,15 +127,6 @@
 
 #pragma mark - Setter & Getter -
 
-- (void)setSelectedDate:(NSDate *)selectedDate
-{
-	_selectedDate = selectedDate;
-	
-	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateStyle:NSDateFormatterShortStyle];
-	self.title = [dateFormatter stringFromDate:_selectedDate];
-}
-
 - (WorkoutLogDetailViewController *)logDetailViewContorller
 {
 	if (!_logDetailViewContorller)

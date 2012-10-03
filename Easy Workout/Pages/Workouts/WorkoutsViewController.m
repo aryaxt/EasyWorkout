@@ -12,6 +12,7 @@
 @synthesize tableView = _tableView;
 @synthesize workoutsDictionary = _workoutsDictionary;
 @synthesize workoutCategories = _workoutCategories;
+@synthesize expandedSections = _expandedSections;
 
 #pragma mark - UIViewController Methods -
 
@@ -20,6 +21,7 @@
     [super viewDidLoad];
 	
 	self.workoutsDictionary = [NSMutableDictionary dictionary];
+	self.expandedSections = [NSMutableArray array];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -56,6 +58,25 @@
 	
 }
 
+#pragma mark - CellExpandableHeaderViewDelegate Delegate - 
+
+- (void)cellExpandableHeaderViewDidSelectExpandInSection:(NSInteger)section
+{
+	NSNumber *currentSection = [NSNumber numberWithInt:section];
+	
+	if ([self.expandedSections containsObject:currentSection])
+	{
+		[self.expandedSections removeObject:currentSection];
+	}
+	else
+	{
+		[self.expandedSections addObject:currentSection];
+	}
+	
+	[self.tableView beginUpdates];
+	[self.tableView endUpdates];
+}
+
 #pragma mark - UITableView Delegate & Datasrouce -
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -81,15 +102,48 @@
 	return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
 	WorkoutCategory *category = [self.workoutCategories objectAtIndex:section];
-	return category.name;
+	
+	CellExpandableHeaderView *header = [[CellExpandableHeaderView alloc] initWithSection:section];
+	[header setTitle:category.name];
+	[header setDelegate:self];
+	return header;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	
+	if ([self.expandedSections containsObject:[NSNumber numberWithInt:indexPath.section]])
+	{
+		return 44;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+	return 30;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+	{
+		WorkoutCategory *category = [self.workoutCategories objectAtIndex:indexPath.section];
+		NSArray *workouts = [self.workoutsDictionary objectForKey:category.name];
+		Workout *workout = [workouts objectAtIndex:indexPath.row];
+		[workout delete];
+		[self populateData];
+    }
 }
 
 @end

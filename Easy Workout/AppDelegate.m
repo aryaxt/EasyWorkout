@@ -47,7 +47,7 @@
 
 - (void)setAppearanceSettings
 {
-	UIColor *color = [UIColor blackColor];
+	UIColor *color = [UIColor colorWithRed:31.0/255.0 green:52.0/255.0 blue:145.0/255.0 alpha:1];
 	
 	[[UINavigationBar appearance] setTintColor:color];
 	[[UIToolbar appearance] setTintColor:color];

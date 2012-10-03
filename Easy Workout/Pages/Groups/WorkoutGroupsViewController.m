@@ -11,12 +11,14 @@
 @implementation WorkoutGroupsViewController
 @synthesize tableView = _tableView;
 @synthesize workoutGroupsDictionary = _workoutGroupsDictionary;
+@synthesize expandedSections = _expandedSections;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
 	self.workoutGroupsDictionary = [NSMutableDictionary dictionary];
+	self.expandedSections = [NSMutableArray array];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -38,6 +40,25 @@
 	}
 	
 	[self.tableView reloadData];
+}
+
+#pragma mark - CellExpandableHeaderViewDelegate Delegate -
+
+- (void)cellExpandableHeaderViewDidSelectExpandInSection:(NSInteger)section
+{
+	NSNumber *currentSection = [NSNumber numberWithInt:section];
+	
+	if ([self.expandedSections containsObject:currentSection])
+	{
+		[self.expandedSections removeObject:currentSection];
+	}
+	else
+	{
+		[self.expandedSections addObject:currentSection];
+	}
+	
+	[self.tableView beginUpdates];
+	[self.tableView endUpdates];
 }
 
 #pragma mark - WorkoutGroupHeaderViewDelegate Methods -
@@ -73,20 +94,50 @@
 	return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
 	WorkoutGroup *group = [self.workoutGroups objectAtIndex:section];
-	return group.name;
+	
+	CellExpandableHeaderView *header = [[CellExpandableHeaderView alloc] initWithSection:section];
+	[header setTitle:group.name];
+	[header setDelegate:self];
+	return header;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	if ([self.expandedSections containsObject:[NSNumber numberWithInt:indexPath.section]])
+	{
+		return 44;
+	}
+	else
+	{
+		return 0;
+	}
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 50;
+	return 30;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+	{
+        WorkoutGroup *group = [self.workoutGroups objectAtIndex:indexPath.section];
+		
+		NSMutableArray *workouts = [NSMutableArray arrayWithArray:[self.workoutGroupsDictionary objectForKey:group.name]];
+		Workout *workout = [workouts objectAtIndex:indexPath.row];
+		[workouts removeObject:workout];
+		group.workouts = [NSSet setWithArray:workouts];
+		[self populateWorkoutGroups];
+    }
 }
 
 @end

@@ -35,6 +35,14 @@
 		1592849B1619AC8700690188 /* AddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592847A1619AC8700690188 /* AddCategoryViewController.m */; };
 		1592849C1619AC8700690188 /* AddWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592847C1619AC8700690188 /* AddWorkoutViewController.m */; };
 		1592849D1619AC8700690188 /* WorkoutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592847E1619AC8700690188 /* WorkoutsViewController.m */; };
+		159C99DE161BE87600CCAFD9 /* CellExpandableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C99DD161BE87600CCAFD9 /* CellExpandableHeaderView.m */; };
+		159C99E0161BE88D00CCAFD9 /* CellExpandableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159C99DF161BE88D00CCAFD9 /* CellExpandableHeaderView.xib */; };
+		159C99E5161BEA5400CCAFD9 /* expand.png in Resources */ = {isa = PBXBuildFile; fileRef = 159C99E4161BEA5400CCAFD9 /* expand.png */; };
+		159C99E8161BF20500CCAFD9 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C99E7161BF20500CCAFD9 /* UIView+Additions.m */; };
+		159C99EB161BF9F300CCAFD9 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C99EA161BF9F300CCAFD9 /* GradientButton.m */; };
+		159C99EF161C023C00CCAFD9 /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = 159C99EC161C023C00CCAFD9 /* group.png */; };
+		159C99F0161C023C00CCAFD9 /* log.png in Resources */ = {isa = PBXBuildFile; fileRef = 159C99ED161C023C00CCAFD9 /* log.png */; };
+		159C99F1161C023C00CCAFD9 /* workout.png in Resources */ = {isa = PBXBuildFile; fileRef = 159C99EE161C023C00CCAFD9 /* workout.png */; };
 		15C107961617EE4100B1B9FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107951617EE4100B1B9FB /* UIKit.framework */; };
 		15C107981617EE4100B1B9FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107971617EE4100B1B9FB /* Foundation.framework */; };
 		15C1079A1617EE4100B1B9FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107991617EE4100B1B9FB /* CoreGraphics.framework */; };
@@ -104,6 +112,17 @@
 		1592847C1619AC8700690188 /* AddWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWorkoutViewController.m; sourceTree = "<group>"; };
 		1592847D1619AC8700690188 /* WorkoutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutsViewController.h; sourceTree = "<group>"; };
 		1592847E1619AC8700690188 /* WorkoutsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutsViewController.m; sourceTree = "<group>"; };
+		159C99DC161BE87600CCAFD9 /* CellExpandableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellExpandableHeaderView.h; sourceTree = "<group>"; };
+		159C99DD161BE87600CCAFD9 /* CellExpandableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellExpandableHeaderView.m; sourceTree = "<group>"; };
+		159C99DF161BE88D00CCAFD9 /* CellExpandableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellExpandableHeaderView.xib; sourceTree = "<group>"; };
+		159C99E4161BEA5400CCAFD9 /* expand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expand.png; sourceTree = "<group>"; };
+		159C99E6161BF20500CCAFD9 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		159C99E7161BF20500CCAFD9 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		159C99E9161BF9F300CCAFD9 /* GradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientButton.h; sourceTree = "<group>"; };
+		159C99EA161BF9F300CCAFD9 /* GradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
+		159C99EC161C023C00CCAFD9 /* group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = group.png; sourceTree = "<group>"; };
+		159C99ED161C023C00CCAFD9 /* log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = log.png; sourceTree = "<group>"; };
+		159C99EE161C023C00CCAFD9 /* workout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout.png; sourceTree = "<group>"; };
 		15C107911617EE4100B1B9FB /* Easy Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C107951617EE4100B1B9FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		15C107971617EE4100B1B9FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -152,6 +171,7 @@
 		159284441619AC8700690188 /* Easy Workout */ = {
 			isa = PBXGroup;
 			children = (
+				159C99E1161BE95F00CCAFD9 /* Images */,
 				159284581619AC8700690188 /* Categories */,
 				159284471619AC8700690188 /* Business & Data Layer */,
 				159284671619AC8700690188 /* Pages */,
@@ -211,6 +231,8 @@
 				1592845A1619AC8700690188 /* NSString+Additions.m */,
 				1592845B1619AC8700690188 /* UIViewController+Additions.h */,
 				1592845C1619AC8700690188 /* UIViewController+Additions.m */,
+				159C99E6161BF20500CCAFD9 /* UIView+Additions.h */,
+				159C99E7161BF20500CCAFD9 /* UIView+Additions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -225,6 +247,7 @@
 		159284671619AC8700690188 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				159C99DA161BE85E00CCAFD9 /* Usable UI */,
 				159284781619AC8700690188 /* Workouts */,
 				1592846F1619AC8700690188 /* Logs */,
 				1592846A1619AC8700690188 /* Groups */,
@@ -271,6 +294,29 @@
 				1592847E1619AC8700690188 /* WorkoutsViewController.m */,
 			);
 			path = Workouts;
+			sourceTree = "<group>";
+		};
+		159C99DA161BE85E00CCAFD9 /* Usable UI */ = {
+			isa = PBXGroup;
+			children = (
+				159C99E9161BF9F300CCAFD9 /* GradientButton.h */,
+				159C99EA161BF9F300CCAFD9 /* GradientButton.m */,
+				159C99DC161BE87600CCAFD9 /* CellExpandableHeaderView.h */,
+				159C99DD161BE87600CCAFD9 /* CellExpandableHeaderView.m */,
+				159C99DF161BE88D00CCAFD9 /* CellExpandableHeaderView.xib */,
+			);
+			path = "Usable UI";
+			sourceTree = "<group>";
+		};
+		159C99E1161BE95F00CCAFD9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				159C99EC161C023C00CCAFD9 /* group.png */,
+				159C99ED161C023C00CCAFD9 /* log.png */,
+				159C99EE161C023C00CCAFD9 /* workout.png */,
+				159C99E4161BEA5400CCAFD9 /* expand.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		15C107861617EE4100B1B9FB = {
@@ -379,6 +425,11 @@
 				159284901619AC8700690188 /* InfoPlist.strings in Resources */,
 				159284911619AC8700690188 /* MainStoryboard_iPad.storyboard in Resources */,
 				159284921619AC8700690188 /* MainStoryboard_iPhone.storyboard in Resources */,
+				159C99E0161BE88D00CCAFD9 /* CellExpandableHeaderView.xib in Resources */,
+				159C99E5161BEA5400CCAFD9 /* expand.png in Resources */,
+				159C99EF161C023C00CCAFD9 /* group.png in Resources */,
+				159C99F0161C023C00CCAFD9 /* log.png in Resources */,
+				159C99F1161C023C00CCAFD9 /* workout.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +486,8 @@
 				1592849B1619AC8700690188 /* AddCategoryViewController.m in Sources */,
 				1592849C1619AC8700690188 /* AddWorkoutViewController.m in Sources */,
 				1592849D1619AC8700690188 /* WorkoutsViewController.m in Sources */,
+				159C99DE161BE87600CCAFD9 /* CellExpandableHeaderView.m in Sources */,
+				159C99E8161BF20500CCAFD9 /* UIView+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				156D5DF41619ADC700DA84AA /* iWorkoutTests.m in Sources */,
+				159C99EB161BF9F300CCAFD9 /* GradientButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

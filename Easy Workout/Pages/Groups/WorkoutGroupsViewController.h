@@ -10,11 +10,13 @@
 #import "BaseViewController.h"
 #import "WorkoutGroup.h"
 #import "Workout.h"
+#import "CellExpandableHeaderView.h"
 
-@interface WorkoutGroupsViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate>
+@interface WorkoutGroupsViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, CellExpandableHeaderViewDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *workoutGroupsDictionary;
 @property (nonatomic, strong) NSArray *workoutGroups;
+@property (nonatomic, strong) NSMutableArray *expandedSections;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 
