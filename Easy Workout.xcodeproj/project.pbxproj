@@ -43,6 +43,8 @@
 		159C99EF161C023C00CCAFD9 /* group.png in Resources */ = {isa = PBXBuildFile; fileRef = 159C99EC161C023C00CCAFD9 /* group.png */; };
 		159C99F0161C023C00CCAFD9 /* log.png in Resources */ = {isa = PBXBuildFile; fileRef = 159C99ED161C023C00CCAFD9 /* log.png */; };
 		159C99F1161C023C00CCAFD9 /* workout.png in Resources */ = {isa = PBXBuildFile; fileRef = 159C99EE161C023C00CCAFD9 /* workout.png */; };
+		159C99FE161D66B100CCAFD9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159C99FD161D66B100CCAFD9 /* QuartzCore.framework */; };
+		159C9A01161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C9A00161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m */; };
 		15C107961617EE4100B1B9FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107951617EE4100B1B9FB /* UIKit.framework */; };
 		15C107981617EE4100B1B9FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107971617EE4100B1B9FB /* Foundation.framework */; };
 		15C1079A1617EE4100B1B9FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107991617EE4100B1B9FB /* CoreGraphics.framework */; };
@@ -123,6 +125,9 @@
 		159C99EC161C023C00CCAFD9 /* group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = group.png; sourceTree = "<group>"; };
 		159C99ED161C023C00CCAFD9 /* log.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = log.png; sourceTree = "<group>"; };
 		159C99EE161C023C00CCAFD9 /* workout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout.png; sourceTree = "<group>"; };
+		159C99FD161D66B100CCAFD9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		159C99FF161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+RoundedCorners.h"; sourceTree = "<group>"; };
+		159C9A00161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+RoundedCorners.m"; sourceTree = "<group>"; };
 		15C107911617EE4100B1B9FB /* Easy Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C107951617EE4100B1B9FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		15C107971617EE4100B1B9FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -137,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159C99FE161D66B100CCAFD9 /* QuartzCore.framework in Frameworks */,
 				15C108211617EEC000B1B9FB /* CoreData.framework in Frameworks */,
 				15C107961617EE4100B1B9FB /* UIKit.framework in Frameworks */,
 				15C107981617EE4100B1B9FB /* Foundation.framework in Frameworks */,
@@ -233,6 +239,8 @@
 				1592845C1619AC8700690188 /* UIViewController+Additions.m */,
 				159C99E6161BF20500CCAFD9 /* UIView+Additions.h */,
 				159C99E7161BF20500CCAFD9 /* UIView+Additions.m */,
+				159C99FF161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.h */,
+				159C9A00161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -341,6 +349,7 @@
 		15C107941617EE4100B1B9FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				159C99FD161D66B100CCAFD9 /* QuartzCore.framework */,
 				15C108201617EEC000B1B9FB /* CoreData.framework */,
 				15C107951617EE4100B1B9FB /* UIKit.framework */,
 				15C107971617EE4100B1B9FB /* Foundation.framework */,
@@ -488,6 +497,7 @@
 				1592849D1619AC8700690188 /* WorkoutsViewController.m in Sources */,
 				159C99DE161BE87600CCAFD9 /* CellExpandableHeaderView.m in Sources */,
 				159C99E8161BF20500CCAFD9 /* UIView+Additions.m in Sources */,
+				159C9A01161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

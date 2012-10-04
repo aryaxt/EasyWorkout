@@ -11,7 +11,7 @@
 #import "WorkoutGroup.h"
 #import "Workout.h"
 
-@interface AddWrokoutGroupViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate>
+@interface AddWrokoutGroupViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) NSArray *workouts;
 @property (nonatomic, strong) IBOutlet UITextField *txtGroupName;

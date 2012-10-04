@@ -43,6 +43,14 @@
 	return cell;
 }
 
+#pragma mark - UITextFieldDelegate Methods -
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	[textField resignFirstResponder];
+	return YES;
+}
+
 #pragma mark - IBActions -
 
 - (IBAction)addSelected:(id)sender

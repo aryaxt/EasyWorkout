@@ -10,6 +10,6 @@
 
 @interface UIView (Additions)
 
-- (void)rotateToDegree:(CGFloat)degree;
+- (void)rotateToDegree:(CGFloat)degree animated:(BOOL)animated;
 
 @end

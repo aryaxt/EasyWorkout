@@ -42,13 +42,23 @@
 	[self.tableView reloadData];
 }
 
+- (BOOL)isHeaderExpandedInSection:(NSInteger)section
+{
+	if ([self.expandedSections containsObject:[NSNumber numberWithInt:section]])
+	{
+		return YES;
+	}
+	
+	return NO;
+}
+
 #pragma mark - CellExpandableHeaderViewDelegate Delegate -
 
 - (void)cellExpandableHeaderViewDidSelectExpandInSection:(NSInteger)section
 {
 	NSNumber *currentSection = [NSNumber numberWithInt:section];
 	
-	if ([self.expandedSections containsObject:currentSection])
+	if ([self isHeaderExpandedInSection:section])
 	{
 		[self.expandedSections removeObject:currentSection];
 	}
@@ -101,6 +111,7 @@
 	CellExpandableHeaderView *header = [[CellExpandableHeaderView alloc] initWithSection:section];
 	[header setTitle:group.name];
 	[header setDelegate:self];
+	[header setExpanded:([self isHeaderExpandedInSection:section]) ? YES : NO animated:NO];
 	return header;
 }
 

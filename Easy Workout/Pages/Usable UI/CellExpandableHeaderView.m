@@ -36,11 +36,16 @@
 	self.lblTitle.text = title;
 }
 
+- (void)setExpanded:(BOOL)expanded animated:(BOOL)animated
+{
+	[self.btnExpand rotateToDegree:(expanded) ? 180 : 0 animated:animated];
+}
+
 #pragma mark - IBActions -
 
 - (IBAction)expandSelected:(id)sender
 {
-	[self.btnExpand rotateToDegree:180];
+	[self.btnExpand rotateToDegree:180 animated:YES];
 	[self.delegate cellExpandableHeaderViewDidSelectExpandInSection:self.section];
 }
 

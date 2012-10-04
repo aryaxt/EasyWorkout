@@ -10,6 +10,7 @@
 
 @implementation AddWorkoutViewController
 @synthesize txtWorkoutName = _txtWorkoutName;
+@synthesize txtWorkoutCategory = _txtWorkoutCategory;
 @synthesize pickerView = _pickerView;
 @synthesize categories = _categories;
 
@@ -17,7 +18,11 @@
 {
     [super viewDidLoad];
 	
+	self.txtWorkoutCategory.inputView = self.pickerView;
+	[self.txtWorkoutName becomeFirstResponder];
+	
 	[self populateData];
+	[self populateSelectedCategory];
 }
 
 #pragma mark - Private Methids -
@@ -27,6 +32,13 @@
 	self.categories = [WorkoutCategory getInstancesWithPredicate:nil];
 	
 	[self.pickerView reloadAllComponents];
+}
+
+- (void)populateSelectedCategory
+{
+	NSInteger index = [self.pickerView selectedRowInComponent:0];
+	WorkoutCategory *category = [self.categories objectAtIndex:index];
+	self.txtWorkoutCategory.text = category.name;
 }
 
 #pragma mark - AddCategoryViewControllerDelegate Methods -
@@ -40,6 +52,22 @@
 {
 	[self dismissFormSheetViewControllerAnimated:YES];
 	[self populateData];
+}
+
+#pragma mark - UITextFieldDelegate Methods -
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	if (textField == self.txtWorkoutName)
+	{
+		[self.txtWorkoutCategory becomeFirstResponder];
+	}
+	else
+	{
+		[self.txtWorkoutCategory resignFirstResponder];
+	}
+		
+	return YES;
 }
 
 #pragma mark - UIPickerView Delegate & Datasource -
@@ -57,6 +85,11 @@
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
 	return [[self.categories objectAtIndex:row] name];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+	[self populateSelectedCategory];
 }
 
 #pragma mark - IBAction -

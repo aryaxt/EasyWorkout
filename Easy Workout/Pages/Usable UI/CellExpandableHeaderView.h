@@ -22,7 +22,8 @@
 @property (nonatomic, strong) IBOutlet UIButton *btnDelete;
 
 - (id)initWithSection:(NSInteger)section;
-- (void)setTitle:(NSString *)title;
 - (IBAction)expandSelected:(id)sender;
+- (void)setTitle:(NSString *)title;
+- (void)setExpanded:(BOOL)expanded animated:(BOOL)animated;
 
 @end

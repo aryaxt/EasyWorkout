@@ -12,9 +12,9 @@
 
 @implementation UIView (Additions)
 
-- (void)rotateToDegree:(CGFloat)degree
+- (void)rotateToDegree:(CGFloat)degree animated:(BOOL)animated
 {
-	[UIView animateWithDuration:.3 animations:^{
+	[UIView animateWithDuration:(animated) ? .3 : 0 animations:^{
 		CGAffineTransform rotationTransform =  CGAffineTransformRotate(self.transform, DEGREES_TO_RADIANS(degree));
 		self.transform = rotationTransform;
 	}];

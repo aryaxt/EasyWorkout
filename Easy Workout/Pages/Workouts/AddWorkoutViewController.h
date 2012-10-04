@@ -13,10 +13,11 @@
 #import "AddCategoryViewController.h"
 #import "UIViewController+Additions.h"
 
-@interface AddWorkoutViewController : BaseViewController <UIPickerViewDataSource, UIPickerViewDelegate, AddCategoryViewControllerDelegate>
+@interface AddWorkoutViewController : BaseViewController <UIPickerViewDataSource, UIPickerViewDelegate, AddCategoryViewControllerDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) NSArray *categories;
 @property (nonatomic, strong) IBOutlet UITextField *txtWorkoutName;
+@property (nonatomic, strong) IBOutlet UITextField *txtWorkoutCategory;
 @property (nonatomic, strong) IBOutlet UIPickerView *pickerView;
 
 - (IBAction)addWorkoutSelected:(id)sender;
