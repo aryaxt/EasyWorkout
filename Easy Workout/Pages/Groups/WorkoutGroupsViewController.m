@@ -20,6 +20,7 @@
 	self.workoutGroupsDictionary = [NSMutableDictionary dictionary];
 	self.expandedSections = [NSMutableArray array];
 	[self populateWorkoutGroups];
+	[self.tableView reloadData];
 }
 
 #pragma mark - Private Methods -
@@ -33,8 +34,6 @@
 	{
 		[self.workoutGroupsDictionary setObject:group.workouts.allObjects forKey:group.name];
 	}
-	
-	[self.tableView reloadData];
 }
 
 - (BOOL)isHeaderExpandedInSection:(NSInteger)section
@@ -143,6 +142,8 @@
 		[workouts removeObject:workout];
 		group.workouts = [NSSet setWithArray:workouts];
 		[self populateWorkoutGroups];
+		[self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+							  withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 

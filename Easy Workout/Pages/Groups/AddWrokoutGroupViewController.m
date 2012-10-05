@@ -28,6 +28,15 @@
 	[self.txtGroupName becomeFirstResponder];
 }
 
+#pragma mark - Private Methods -
+
+- (void)updateCheckMarkStateForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+	
+	cell.accessoryType = ([[self.tableView indexPathsForSelectedRows] containsObject:indexPath]) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+}
+
 #pragma mark - UITableView Delegate & Datasrouce -
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -40,8 +49,21 @@
 	Workout *workout = [self.workouts objectAtIndex:indexPath.row];
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WorkoutGroupWorkoutCell"];
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	cell.textLabel.text = workout.name;
+	cell.accessoryType = ([[self.tableView indexPathsForSelectedRows] containsObject:indexPath]) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+	
 	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	[self updateCheckMarkStateForRowAtIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	[self updateCheckMarkStateForRowAtIndexPath:indexPath];
 }
 
 #pragma mark - UITextFieldDelegate Methods -

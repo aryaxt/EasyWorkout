@@ -27,6 +27,7 @@
 	
 	self.selectedDate = [NSDate date];
 	[self populateData];
+	[self.tableView reloadData];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -55,7 +56,6 @@
 	
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date >= %@ AND date <= %@", fromDate, toDate];
 	self.logs = [WorkoutLog getInstancesWithPredicate:predicate];
-	[self.tableView reloadData];
 }
 
 #pragma mark - AddWorkoutLogViewControllerDelegate Methods -
@@ -70,6 +70,7 @@
 	}
 	
 	[self populateData];
+	[self.tableView reloadData];
 }
 
 #pragma mark - WorkoutLogDetailViewControllerDelegate Methods -
@@ -127,6 +128,8 @@
         WorkoutLog *log = [self.logs objectAtIndex:indexPath.row];
 		[log delete];
 		[self populateData];
+		[self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+							  withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 

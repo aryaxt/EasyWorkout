@@ -28,6 +28,7 @@
 {
 	[super viewWillAppear:animated];
 	[self populateData];
+	[self.tableView reloadData];
 }
 
 #pragma mark - Private Mthods -
@@ -48,8 +49,6 @@
 			[self.workoutsDictionary setObject:workouts forKey:category.name];
 		}
 	}
-	
-	[self.tableView reloadData];
 }
 
 - (BOOL)isHeaderExpandedInSection:(NSInteger)section
@@ -155,6 +154,8 @@
 		Workout *workout = [workouts objectAtIndex:indexPath.row];
 		[workout delete];
 		[self populateData];
+		[self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+							  withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 

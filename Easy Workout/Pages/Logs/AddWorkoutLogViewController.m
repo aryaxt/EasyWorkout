@@ -61,6 +61,15 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+#pragma mark - Private Methods -
+
+- (void)updateCheckMarkStateForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+	
+	cell.accessoryType = ([[self.tableView indexPathsForSelectedRows] containsObject:indexPath]) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+}
+
 #pragma mark - UITableView Delegate & Datasrouce -
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -83,6 +92,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddWorkoutLogCell"];
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
+	cell.accessoryType = ([[self.tableView indexPathsForSelectedRows] containsObject:indexPath]) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 	
 	if (indexPath.section == 0)
 	{
@@ -111,8 +122,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{	
+	[self updateCheckMarkStateForRowAtIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	
+	[self updateCheckMarkStateForRowAtIndexPath:indexPath];
 }
 
 @end
