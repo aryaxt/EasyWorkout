@@ -64,8 +64,8 @@
 					</object>
 					<object class="IBUILabel" id="349424837">
 						<reference key="NSNextResponder" ref="354583053"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{37, 4}, {277, 21}}</string>
+						<int key="NSvFlags">302</int>
+						<string key="NSFrame">{{37, 6}, {277, 21}}</string>
 						<reference key="NSSuperview" ref="354583053"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -91,19 +91,19 @@
 						<int key="IBUIBaselineAdjustment">0</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<int key="type">2</int>
-							<double key="pointSize">17</double>
+							<double key="pointSize">18</double>
 						</object>
 						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">17</double>
+							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
 					<object class="IBUIButton" id="619787026">
 						<reference key="NSNextResponder" ref="354583053"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{5, 4}, {22, 22}}</string>
+						<int key="NSvFlags">300</int>
+						<string key="NSFrame">{{5, 6}, {22, 22}}</string>
 						<reference key="NSSuperview" ref="354583053"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="349424837"/>
@@ -249,24 +249,27 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">205</int>
+			<int key="maxID">206</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">CellExpandableHeaderView</string>
 					<string key="superclassName">UIView</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">expandSelected:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">expandSelected:</string>
-						<object class="IBActionInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="expandSelected:">id</string>
+						<string key="tapDetected:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="expandSelected:">
 							<string key="name">expandSelected:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-					</object>
+						<object class="IBActionInfo" key="tapDetected:">
+							<string key="name">tapDetected:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="btnDelete">UIButton</string>
 						<string key="btnExpand">UIButton</string>

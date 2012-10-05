@@ -20,8 +20,11 @@
 {
     [super viewDidLoad];
 	
-	self.workouts = [Workout getInstancesWithPredicate:nil];
-	self.workoutGroups = [WorkoutGroup getInstancesWithPredicate:nil];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		self.workouts = [Workout getInstancesWithPredicate:nil andSortDescriptor:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+		self.workoutGroups = [WorkoutGroup getInstancesWithPredicate:nil
+												   andSortDescriptor:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+	});
 }
 
 #pragma mark - IBActions -

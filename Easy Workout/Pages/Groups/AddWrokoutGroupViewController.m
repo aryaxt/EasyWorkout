@@ -18,13 +18,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	self.workouts = [Workout getInstancesWithPredicate:nil
+									 andSortDescriptor:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
-	[super viewWillAppear:animated];
-	
-	self.workouts = [Workout getInstancesWithPredicate:nil];
+	[super viewDidAppear:animated];
+	[self.txtGroupName becomeFirstResponder];
 }
 
 #pragma mark - UITableView Delegate & Datasrouce -

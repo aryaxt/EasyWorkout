@@ -18,18 +18,27 @@
 {
     [super viewDidLoad];
 	
-	self.txtWorkoutCategory.inputView = self.pickerView;
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[self.pickerView removeFromSuperview];
+		self.txtWorkoutCategory.inputView = self.pickerView;
+		
+		[self populateData];
+		[self populateSelectedCategory];
+	});
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
 	[self.txtWorkoutName becomeFirstResponder];
-	
-	[self populateData];
-	[self populateSelectedCategory];
 }
 
 #pragma mark - Private Methids -
 
 - (void)populateData
 {
-	self.categories = [WorkoutCategory getInstancesWithPredicate:nil];
+	self.categories = [WorkoutCategory getInstancesWithPredicate:nil
+											   andSortDescriptor:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
 	
 	[self.pickerView reloadAllComponents];
 }

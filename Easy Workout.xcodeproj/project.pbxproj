@@ -45,6 +45,8 @@
 		159C99F1161C023C00CCAFD9 /* workout.png in Resources */ = {isa = PBXBuildFile; fileRef = 159C99EE161C023C00CCAFD9 /* workout.png */; };
 		159C99FE161D66B100CCAFD9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159C99FD161D66B100CCAFD9 /* QuartzCore.framework */; };
 		159C9A01161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C9A00161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m */; };
+		159C9A04161D6D5400CCAFD9 /* UITabBarController+Customized.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C9A03161D6D5400CCAFD9 /* UITabBarController+Customized.m */; };
+		159C9A06161D6E8600CCAFD9 /* tabBar_cameraButton_ready_matte.png in Resources */ = {isa = PBXBuildFile; fileRef = 159C9A05161D6E8600CCAFD9 /* tabBar_cameraButton_ready_matte.png */; };
 		15C107961617EE4100B1B9FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107951617EE4100B1B9FB /* UIKit.framework */; };
 		15C107981617EE4100B1B9FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107971617EE4100B1B9FB /* Foundation.framework */; };
 		15C1079A1617EE4100B1B9FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107991617EE4100B1B9FB /* CoreGraphics.framework */; };
@@ -128,6 +130,9 @@
 		159C99FD161D66B100CCAFD9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		159C99FF161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+RoundedCorners.h"; sourceTree = "<group>"; };
 		159C9A00161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+RoundedCorners.m"; sourceTree = "<group>"; };
+		159C9A02161D6D5400CCAFD9 /* UITabBarController+Customized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+Customized.h"; sourceTree = "<group>"; };
+		159C9A03161D6D5400CCAFD9 /* UITabBarController+Customized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+Customized.m"; sourceTree = "<group>"; };
+		159C9A05161D6E8600CCAFD9 /* tabBar_cameraButton_ready_matte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBar_cameraButton_ready_matte.png; sourceTree = "<group>"; };
 		15C107911617EE4100B1B9FB /* Easy Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C107951617EE4100B1B9FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		15C107971617EE4100B1B9FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -241,6 +246,8 @@
 				159C99E7161BF20500CCAFD9 /* UIView+Additions.m */,
 				159C99FF161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.h */,
 				159C9A00161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m */,
+				159C9A02161D6D5400CCAFD9 /* UITabBarController+Customized.h */,
+				159C9A03161D6D5400CCAFD9 /* UITabBarController+Customized.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -319,6 +326,7 @@
 		159C99E1161BE95F00CCAFD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				159C9A05161D6E8600CCAFD9 /* tabBar_cameraButton_ready_matte.png */,
 				159C99EC161C023C00CCAFD9 /* group.png */,
 				159C99ED161C023C00CCAFD9 /* log.png */,
 				159C99EE161C023C00CCAFD9 /* workout.png */,
@@ -439,6 +447,7 @@
 				159C99EF161C023C00CCAFD9 /* group.png in Resources */,
 				159C99F0161C023C00CCAFD9 /* log.png in Resources */,
 				159C99F1161C023C00CCAFD9 /* workout.png in Resources */,
+				159C9A06161D6E8600CCAFD9 /* tabBar_cameraButton_ready_matte.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +507,7 @@
 				159C99DE161BE87600CCAFD9 /* CellExpandableHeaderView.m in Sources */,
 				159C99E8161BF20500CCAFD9 /* UIView+Additions.m in Sources */,
 				159C9A01161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m in Sources */,
+				159C9A04161D6D5400CCAFD9 /* UITabBarController+Customized.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

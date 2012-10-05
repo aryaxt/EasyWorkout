@@ -15,10 +15,16 @@
 	return [[CoreDataManager sharedManager] getInstanceForEntity:NSStringFromClass([self class])];
 }
 
-+ (NSArray *)getInstancesWithPredicate:(NSPredicate *)predicate
++ (NSArray *)getInstancesWithPredicate:(NSPredicate *)predicate andSortDescriptor:(NSSortDescriptor *)sortDescriptor
 {
 	return [[CoreDataManager sharedManager] getInstancesWithEntity:NSStringFromClass([self class])
-													  andPredicate:predicate];
+													  predicate:predicate
+												 andSortDescriptor:sortDescriptor];
+}
+
++ (NSArray *)getInstancesWithPredicate:(NSPredicate *)predicate
+{
+	return [[self class] getInstancesWithPredicate:predicate andSortDescriptor:nil];
 }
 
 - (void)delete

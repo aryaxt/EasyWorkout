@@ -19,11 +19,6 @@
 	
 	self.workoutGroupsDictionary = [NSMutableDictionary dictionary];
 	self.expandedSections = [NSMutableArray array];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-	[super viewWillAppear:animated];
 	[self populateWorkoutGroups];
 }
 
@@ -32,7 +27,7 @@
 - (void)populateWorkoutGroups
 {
 	[self.workoutGroupsDictionary removeAllObjects];
-	self.workoutGroups = [WorkoutGroup getInstancesWithPredicate:nil];
+	self.workoutGroups = [WorkoutGroup getInstancesWithPredicate:nil andSortDescriptor:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
 	
 	for (WorkoutGroup *group in self.workoutGroups)
 	{
@@ -119,7 +114,7 @@
 {
 	if ([self.expandedSections containsObject:[NSNumber numberWithInt:indexPath.section]])
 	{
-		return 44;
+		return 40;
 	}
 	else
 	{
@@ -129,7 +124,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 30;
+	return 40;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

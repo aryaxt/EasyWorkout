@@ -294,7 +294,7 @@
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Rt-Tt-VAs">
                                                     <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
@@ -461,7 +461,7 @@
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KzS-L5-TxH">
                                                     <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
@@ -696,89 +696,6 @@
         <image name="log.png" width="23" height="25"/>
         <image name="workout.png" width="28" height="10"/>
     </resources>
-    <classes>
-        <class className="AddCategoryViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddCategoryViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelSelected:"/>
-                <relationship kind="action" name="doneSelected:"/>
-                <relationship kind="outlet" name="txtName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddWorkoutLogViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWorkoutLogViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addSelected:"/>
-                <relationship kind="action" name="cancelSelected:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="AddWorkoutViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWorkoutViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addCategorySelected:"/>
-                <relationship kind="action" name="addWorkoutSelected:"/>
-                <relationship kind="action" name="cancelSelected:"/>
-                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
-                <relationship kind="outlet" name="txtWorkoutCategory" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtWorkoutName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="AddWrokoutGroupViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWrokoutGroupViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addSelected:"/>
-                <relationship kind="action" name="cancelSelected:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="txtGroupName" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="BaseViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
-        </class>
-        <class className="WorkoutGroupsViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutGroupsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="WorkoutLogCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutLogCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="bottomView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="lblReps" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblWeight" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblWorkoutName" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="WorkoutLogDetailViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutLogDetailViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelSelected:"/>
-                <relationship kind="action" name="doneSelected:"/>
-                <relationship kind="action" name="repStepperDidChange:"/>
-                <relationship kind="action" name="textFieldDidChangeValue:"/>
-                <relationship kind="action" name="weightStepperDidChange:"/>
-                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
-                <relationship kind="outlet" name="repStepper" candidateClass="UIStepper"/>
-                <relationship kind="outlet" name="txtRep" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtWeight" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="weightStepper" candidateClass="UIStepper"/>
-            </relationships>
-        </class>
-        <class className="WorkoutLogsViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutLogsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="WorkoutsViewController" superclassName="BaseViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutsViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

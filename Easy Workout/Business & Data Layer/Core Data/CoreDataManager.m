@@ -66,7 +66,7 @@
 
 - (id)getInstanceWithEntity:(NSString *)entity andPredicate:(NSPredicate *)predicate
 {
-	NSArray *result = [self getInstancesWithEntity:entity andPredicate:predicate];
+	NSArray *result = [self getInstancesWithEntity:entity predicate:predicate andSortDescriptor:nil];
 	
 	if (result.count == 1)
 	{
@@ -76,7 +76,9 @@
 	return nil;
 }
 
-- (NSArray *)getInstancesWithEntity:(NSString *)entity andPredicate:(NSPredicate *)predicate
+- (NSArray *)getInstancesWithEntity:(NSString *)entity
+						  predicate:(NSPredicate *)predicate
+				  andSortDescriptor:(NSSortDescriptor *)sortDescriptor
 {
 	NSFetchRequest *request = [[NSFetchRequest alloc] init];
 	
@@ -86,6 +88,9 @@
 	
 	if (predicate)
 		[request setPredicate:predicate];
+	
+	if (sortDescriptor)
+		[request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
 	
 	return [self.managedObjectContext executeFetchRequest:request error:nil];
 }

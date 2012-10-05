@@ -35,7 +35,8 @@
 - (void)populateData
 {
 	[self.workoutsDictionary removeAllObjects];
-	self.workoutCategories = [WorkoutCategory getInstancesWithPredicate:nil];
+	self.workoutCategories = [WorkoutCategory getInstancesWithPredicate:nil
+													  andSortDescriptor:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
 	
 	for (WorkoutCategory *category in self.workoutCategories)
 	{
@@ -127,7 +128,7 @@
 {
 	if ([self.expandedSections containsObject:[NSNumber numberWithInt:indexPath.section]])
 	{
-		return 44;
+		return 40;
 	}
 	else
 	{
@@ -137,7 +138,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 30;
+	return 40;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

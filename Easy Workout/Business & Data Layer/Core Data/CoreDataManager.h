@@ -13,9 +13,11 @@
 
 + (CoreDataManager *)sharedManager;
 - (id)getInstanceForEntity:(NSString *)entity;
-- (NSArray *)getInstancesWithEntity:(NSString *)entity andPredicate:(NSPredicate *)predicate;
 - (id)getInstanceWithEntity:(NSString *)entity andPredicate:(NSPredicate *)predicate;
 - (void)deleteManageObject:(id)object;
 - (void)saveContext;
+- (NSArray *)getInstancesWithEntity:(NSString *)entity
+						  predicate:(NSPredicate *)predicate
+				  andSortDescriptor:(NSSortDescriptor *)sortDescriptor;
 
 @end
