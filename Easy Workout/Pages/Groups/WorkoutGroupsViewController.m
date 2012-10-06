@@ -71,6 +71,32 @@
 	[self.tableView endUpdates];
 }
 
+- (void)cellExpandableHeaderViewDidSelectDeleteInSection:(NSInteger)section
+{
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Delete Group" message:@"Are you sure you want to delete this group?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+	alertView.tag = section;
+	[alertView show];
+}
+
+#pragma mark - UIAlertViewDelegate Methods -
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex)
+	{
+		WorkoutGroup *group = [self.workoutGroups objectAtIndex:alertView.tag];
+		[group delete];
+		
+		[self populateWorkoutGroups];
+		[self.tableView deleteSections:[NSIndexSet indexSetWithIndex:alertView.tag]
+					  withRowAnimation:UITableViewRowAnimationAutomatic];
+		
+		// Force table sections to be updated
+		[self.tableView performSelector:@selector(reloadData) withObject:nil afterDelay:0.5];
+		
+	}
+}
+
 #pragma mark - WorkoutGroupHeaderViewDelegate Methods -
 
 - (void)workoutGroupHeaderViewDidSelectDeleteForWorkoutGroup:(WorkoutGroup *)group

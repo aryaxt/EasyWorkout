@@ -12,7 +12,7 @@
 #import "WorkoutCategory.h"
 #import "CellExpandableHeaderView.h"
 
-@interface WorkoutsViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, CellExpandableHeaderViewDelegate>
+@interface WorkoutsViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, CellExpandableHeaderViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *workoutCategories;

@@ -11,6 +11,7 @@
 
 @protocol CellExpandableHeaderViewDelegate <NSObject>
 - (void)cellExpandableHeaderViewDidSelectExpandInSection:(NSInteger)section;
+- (void)cellExpandableHeaderViewDidSelectDeleteInSection:(NSInteger)section;
 @end
 
 @interface CellExpandableHeaderView : UIView
@@ -23,6 +24,7 @@
 
 - (id)initWithSection:(NSInteger)section;
 - (IBAction)expandSelected:(id)sender;
+- (IBAction)deleteSelected:(id)sender;
 - (void)setTitle:(NSString *)title;
 - (void)setExpanded:(BOOL)expanded animated:(BOOL)animated;
 

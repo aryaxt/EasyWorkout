@@ -49,6 +49,11 @@
 	[self.delegate cellExpandableHeaderViewDidSelectExpandInSection:self.section];
 }
 
+- (IBAction)deleteSelected:(id)sender
+{
+	[self.delegate cellExpandableHeaderViewDidSelectDeleteInSection:self.section];
+}
+
 - (IBAction)tapDetected:(id)sender
 {
 	[self expandSelected:nil];

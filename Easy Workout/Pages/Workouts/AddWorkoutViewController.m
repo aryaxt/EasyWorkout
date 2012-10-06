@@ -92,12 +92,16 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-	NSString *alertInput = [alertView textFieldAtIndex:0].text;
-	if (alertInput.length)
+	if (buttonIndex)
 	{
-		WorkoutCategory *category = [WorkoutCategory getInstance];
-		category.name = alertInput;
-		[self populateData];
+		NSString *alertInput = [alertView textFieldAtIndex:0].text;
+		
+		if (alertInput.length)
+		{
+			WorkoutCategory *category = [WorkoutCategory getInstance];
+			category.name = alertInput;
+			[self populateData];
+		}
 	}
 }
 

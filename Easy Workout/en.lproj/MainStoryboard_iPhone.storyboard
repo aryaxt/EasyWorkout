@@ -254,11 +254,11 @@
             </objects>
             <point key="canvasLocation" x="1420" y="942"/>
         </scene>
-        <!--Navigation Controller - Groups-->
+        <!--Navigation Controller - Routines-->
         <scene sceneID="22f-Za-dP6">
             <objects>
                 <navigationController definesPresentationContext="YES" id="6qB-WA-uBG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Groups" image="group.png" id="oTE-hy-To5"/>
+                    <tabBarItem key="tabBarItem" title="Routines" image="group.png" id="oTE-hy-To5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UkU-77-3hp">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -270,7 +270,7 @@
             </objects>
             <point key="canvasLocation" x="640" y="365"/>
         </scene>
-        <!--Workout Groups View Controller - Workout Groups-->
+        <!--Workout Groups View Controller - Workout Routines-->
         <scene sceneID="PzD-Bk-dfM">
             <objects>
                 <viewController id="VLG-Pr-IPZ" customClass="WorkoutGroupsViewController" sceneMemberID="viewController">
@@ -310,8 +310,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Groups" id="bii-2t-Jjb"/>
-                    <navigationItem key="navigationItem" title="Workout Groups" id="i6Z-Qs-9c6">
+                    <tabBarItem key="tabBarItem" title="Routine" id="bii-2t-Jjb"/>
+                    <navigationItem key="navigationItem" title="Workout Routines" id="i6Z-Qs-9c6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mto-fV-nOZ">
                             <connections>
                                 <segue destination="s0u-Vh-gty" kind="modal" modalTransitionStyle="flipHorizontal" id="E1I-TP-1Pk"/>
@@ -343,7 +343,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Add Group" id="A7G-4v-Uy7">
+                                    <navigationItem title="Add Routine" id="A7G-4v-Uy7">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="YqA-6I-zhK">
                                             <connections>
                                                 <action selector="cancelSelected:" destination="s0u-Vh-gty" id="0Y2-UF-P2Q"/>

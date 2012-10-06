@@ -80,6 +80,40 @@
 	[self.tableView endUpdates];
 }
 
+- (void)cellExpandableHeaderViewDidSelectDeleteInSection:(NSInteger)section
+{
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Delete Workouts" message:@"Are you sure you want to delete this category and all belonging workouts?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+	alertView.tag = section;
+	[alertView show];
+}
+
+#pragma mark - UIAlertViewDelegate Methods -
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex)
+	{
+		WorkoutCategory *category = [self.workoutCategories objectAtIndex:alertView.tag];
+		
+		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"category == %@", category];
+		NSArray *workoutsForCategory = [Workout getInstancesWithPredicate:predicate];
+		
+		for (Workout *workout in workoutsForCategory)
+		{
+			[workout delete];
+		}
+		
+		[category delete];
+				
+		[self populateData];
+		[self.tableView deleteSections:[NSIndexSet indexSetWithIndex:alertView.tag]
+					  withRowAnimation:UITableViewRowAnimationAutomatic];
+		
+		// Force table sections to be updated
+		[self.tableView performSelector:@selector(reloadData) withObject:nil afterDelay:0.5];
+	}
+}
+
 #pragma mark - UITableView Delegate & Datasrouce -
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
