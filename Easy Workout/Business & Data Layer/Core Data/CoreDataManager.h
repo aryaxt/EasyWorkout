@@ -18,6 +18,7 @@
 - (void)saveContext;
 - (NSArray *)getInstancesWithEntity:(NSString *)entity
 						  predicate:(NSPredicate *)predicate
-				  andSortDescriptor:(NSSortDescriptor *)sortDescriptor;
+					 sortDescriptor:(NSSortDescriptor *)sortDescriptor
+						   andLimit:(NSInteger)limit;
 
 @end

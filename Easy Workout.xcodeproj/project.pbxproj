@@ -32,7 +32,6 @@
 		159284981619AC8700690188 /* WorkoutLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284731619AC8700690188 /* WorkoutLogCell.m */; };
 		159284991619AC8700690188 /* WorkoutLogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284751619AC8700690188 /* WorkoutLogDetailViewController.m */; };
 		1592849A1619AC8700690188 /* WorkoutLogsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284771619AC8700690188 /* WorkoutLogsViewController.m */; };
-		1592849B1619AC8700690188 /* AddCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592847A1619AC8700690188 /* AddCategoryViewController.m */; };
 		1592849C1619AC8700690188 /* AddWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592847C1619AC8700690188 /* AddWorkoutViewController.m */; };
 		1592849D1619AC8700690188 /* WorkoutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592847E1619AC8700690188 /* WorkoutsViewController.m */; };
 		159C99DE161BE87600CCAFD9 /* CellExpandableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C99DD161BE87600CCAFD9 /* CellExpandableHeaderView.m */; };
@@ -110,8 +109,6 @@
 		159284751619AC8700690188 /* WorkoutLogDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutLogDetailViewController.m; sourceTree = "<group>"; };
 		159284761619AC8700690188 /* WorkoutLogsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutLogsViewController.h; sourceTree = "<group>"; };
 		159284771619AC8700690188 /* WorkoutLogsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutLogsViewController.m; sourceTree = "<group>"; };
-		159284791619AC8700690188 /* AddCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCategoryViewController.h; sourceTree = "<group>"; };
-		1592847A1619AC8700690188 /* AddCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCategoryViewController.m; sourceTree = "<group>"; };
 		1592847B1619AC8700690188 /* AddWorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWorkoutViewController.h; sourceTree = "<group>"; };
 		1592847C1619AC8700690188 /* AddWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWorkoutViewController.m; sourceTree = "<group>"; };
 		1592847D1619AC8700690188 /* WorkoutsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutsViewController.h; sourceTree = "<group>"; };
@@ -301,8 +298,6 @@
 		159284781619AC8700690188 /* Workouts */ = {
 			isa = PBXGroup;
 			children = (
-				159284791619AC8700690188 /* AddCategoryViewController.h */,
-				1592847A1619AC8700690188 /* AddCategoryViewController.m */,
 				1592847B1619AC8700690188 /* AddWorkoutViewController.h */,
 				1592847C1619AC8700690188 /* AddWorkoutViewController.m */,
 				1592847D1619AC8700690188 /* WorkoutsViewController.h */,
@@ -501,7 +496,6 @@
 				159284981619AC8700690188 /* WorkoutLogCell.m in Sources */,
 				159284991619AC8700690188 /* WorkoutLogDetailViewController.m in Sources */,
 				1592849A1619AC8700690188 /* WorkoutLogsViewController.m in Sources */,
-				1592849B1619AC8700690188 /* AddCategoryViewController.m in Sources */,
 				1592849C1619AC8700690188 /* AddWorkoutViewController.m in Sources */,
 				1592849D1619AC8700690188 /* WorkoutsViewController.m in Sources */,
 				159C99DE161BE87600CCAFD9 /* CellExpandableHeaderView.m in Sources */,

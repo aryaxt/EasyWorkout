@@ -58,15 +58,40 @@
 	self.logs = [WorkoutLog getInstancesWithPredicate:predicate];
 }
 
+- (WorkoutLog *)pastLogForWorkout:(Workout *)workout
+{
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"workout == %@", workout];
+	NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO];
+	
+	NSArray *logs = [WorkoutLog getInstancesWithPredicate:predicate
+											  sortDescriptor:sortDescriptor
+													andLimit:1];
+	
+	if (logs.count)
+	{
+		return [logs lastObject];
+	}
+	
+	return nil;
+}
+
 #pragma mark - AddWorkoutLogViewControllerDelegate Methods -
 
 - (void)addWorkoutLogViewControllerDidSelectWorkouts:(NSArray *)workouts
 {
 	for (Workout *workout in workouts)
 	{
+		WorkoutLog *pastLog = [self pastLogForWorkout:workout];
+		
 		WorkoutLog *log = [WorkoutLog getInstance];
 		log.date = [NSDate date];
 		log.workout = workout;
+		
+		if (pastLog)
+		{
+			log.reps = pastLog.reps;
+			log.weight = pastLog.weight;
+		}
 	}
 	
 	[self populateData];

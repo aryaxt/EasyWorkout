@@ -61,13 +61,6 @@
 	return NO;
 }
 
-#pragma mark - IBActions -
-
-- (IBAction)addSelected:(id)sender
-{
-	
-}
-
 #pragma mark - CellExpandableHeaderViewDelegate Delegate - 
 
 - (void)cellExpandableHeaderViewDidSelectExpandInSection:(NSInteger)section

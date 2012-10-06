@@ -19,7 +19,18 @@
 {
 	return [[CoreDataManager sharedManager] getInstancesWithEntity:NSStringFromClass([self class])
 													  predicate:predicate
-												 andSortDescriptor:sortDescriptor];
+													sortDescriptor:sortDescriptor
+														  andLimit:0];
+}
+
++ (NSArray *)getInstancesWithPredicate:(NSPredicate *)predicate
+						sortDescriptor:(NSSortDescriptor *)sortDescriptor
+							  andLimit:(NSInteger)limit
+{
+	return [[CoreDataManager sharedManager] getInstancesWithEntity:NSStringFromClass([self class])
+														 predicate:predicate
+													sortDescriptor:sortDescriptor
+														  andLimit:limit];
 }
 
 + (NSArray *)getInstancesWithPredicate:(NSPredicate *)predicate

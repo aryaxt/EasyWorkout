@@ -50,19 +50,6 @@
 	self.txtWorkoutCategory.text = category.name;
 }
 
-#pragma mark - AddCategoryViewControllerDelegate Methods -
-
-- (void)addCategoryViewControllerDidSelectCancel
-{
-	[self dismissFormSheetViewControllerAnimated:YES];
-}
-
-- (void)addCategoryViewControllerDidAddCategory:(WorkoutCategory *)category
-{
-	[self dismissFormSheetViewControllerAnimated:YES];
-	[self populateData];
-}
-
 #pragma mark - UITextFieldDelegate Methods -
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -101,6 +88,19 @@
 	[self populateSelectedCategory];
 }
 
+#pragma mark - UIAlertViewDelegate Methods -
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	NSString *alertInput = [alertView textFieldAtIndex:0].text;
+	if (alertInput.length)
+	{
+		WorkoutCategory *category = [WorkoutCategory getInstance];
+		category.name = alertInput;
+		[self populateData];
+	}
+}
+
 #pragma mark - IBAction -
 
 - (IBAction)addWorkoutSelected:(id)sender
@@ -118,9 +118,13 @@
 
 - (IBAction)addCategorySelected:(id)sender
 {
-	AddCategoryViewController *vc = [[AddCategoryViewController alloc] initFromStoryboard];
-	vc.delegate = self;
-	[self presentFormSheetViewContorller:vc animated:YES];
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Add Category"
+														message:@"Enter a category please."
+													   delegate:self
+											  cancelButtonTitle:@"Cancel"
+											  otherButtonTitles:@"Add", nil];
+	[alertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
+	[alertView show];
 }
 
 - (IBAction)cancelSelected:(id)sender

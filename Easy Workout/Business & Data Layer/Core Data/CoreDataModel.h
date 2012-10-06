@@ -14,7 +14,11 @@
 
 + (id)getInstance;
 + (NSArray *)getInstancesWithPredicate:(NSPredicate *)predicate;
-+ (NSArray *)getInstancesWithPredicate:(NSPredicate *)predicate andSortDescriptor:(NSSortDescriptor *)sortDescriptor;
++ (NSArray *)getInstancesWithPredicate:(NSPredicate *)predicate
+					 andSortDescriptor:(NSSortDescriptor *)sortDescriptor;
++ (NSArray *)getInstancesWithPredicate:(NSPredicate *)predicate
+					 sortDescriptor:(NSSortDescriptor *)sortDescriptor
+							  andLimit:(NSInteger)limit;
 - (void)delete;
 
 @end

@@ -19,6 +19,12 @@
 	
 	self.workoutGroupsDictionary = [NSMutableDictionary dictionary];
 	self.expandedSections = [NSMutableArray array];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	
 	[self populateWorkoutGroups];
 	[self.tableView reloadData];
 }
