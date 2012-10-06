@@ -45,7 +45,6 @@
 		159C99FE161D66B100CCAFD9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159C99FD161D66B100CCAFD9 /* QuartzCore.framework */; };
 		159C9A01161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C9A00161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m */; };
 		159C9A04161D6D5400CCAFD9 /* UITabBarController+Customized.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C9A03161D6D5400CCAFD9 /* UITabBarController+Customized.m */; };
-		159C9A06161D6E8600CCAFD9 /* tabBar_cameraButton_ready_matte.png in Resources */ = {isa = PBXBuildFile; fileRef = 159C9A05161D6E8600CCAFD9 /* tabBar_cameraButton_ready_matte.png */; };
 		15BC03A31620E1590008323C /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BC03A21620E1590008323C /* delete.png */; };
 		15C107961617EE4100B1B9FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107951617EE4100B1B9FB /* UIKit.framework */; };
 		15C107981617EE4100B1B9FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107971617EE4100B1B9FB /* Foundation.framework */; };
@@ -130,7 +129,6 @@
 		159C9A00161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+RoundedCorners.m"; sourceTree = "<group>"; };
 		159C9A02161D6D5400CCAFD9 /* UITabBarController+Customized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+Customized.h"; sourceTree = "<group>"; };
 		159C9A03161D6D5400CCAFD9 /* UITabBarController+Customized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+Customized.m"; sourceTree = "<group>"; };
-		159C9A05161D6E8600CCAFD9 /* tabBar_cameraButton_ready_matte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBar_cameraButton_ready_matte.png; sourceTree = "<group>"; };
 		15BC03A21620E1590008323C /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
 		15C107911617EE4100B1B9FB /* Easy Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C107951617EE4100B1B9FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -324,7 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				15BC03A21620E1590008323C /* delete.png */,
-				159C9A05161D6E8600CCAFD9 /* tabBar_cameraButton_ready_matte.png */,
 				159C99EC161C023C00CCAFD9 /* group.png */,
 				159C99ED161C023C00CCAFD9 /* log.png */,
 				159C99EE161C023C00CCAFD9 /* workout.png */,
@@ -445,7 +442,6 @@
 				159C99EF161C023C00CCAFD9 /* group.png in Resources */,
 				159C99F0161C023C00CCAFD9 /* log.png in Resources */,
 				159C99F1161C023C00CCAFD9 /* workout.png in Resources */,
-				159C9A06161D6E8600CCAFD9 /* tabBar_cameraButton_ready_matte.png in Resources */,
 				15BC03A31620E1590008323C /* delete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
