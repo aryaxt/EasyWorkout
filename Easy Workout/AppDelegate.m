@@ -110,6 +110,10 @@
 		workout7.name = @"Leg Curl";
 		workout7.category = legCategory;
 		
+		WorkoutRoutine *routine = [WorkoutRoutine getInstance];
+		routine.name = @"Shoulder & Arms Day";
+		routine.workouts = [NSSet setWithObjects:workout5, workout4, workout3, workout2, workout1, nil];
+		
 		[[CoreDataManager sharedManager] saveContext];
 		[[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:initialDataPopulationPreference];
 	}

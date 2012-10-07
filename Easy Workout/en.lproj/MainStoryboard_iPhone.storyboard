@@ -270,7 +270,7 @@
             </objects>
             <point key="canvasLocation" x="640" y="365"/>
         </scene>
-        <!--Workout Routines View Controller - Workout Routines-->
+        <!--Workout Routines View Controller - Routines-->
         <scene sceneID="PzD-Bk-dfM">
             <objects>
                 <viewController id="VLG-Pr-IPZ" customClass="WorkoutRoutinesViewController" sceneMemberID="viewController">
@@ -311,7 +311,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Routine" id="bii-2t-Jjb"/>
-                    <navigationItem key="navigationItem" title="Workout Routines" id="i6Z-Qs-9c6">
+                    <navigationItem key="navigationItem" title="Routines" id="i6Z-Qs-9c6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mto-fV-nOZ">
                             <connections>
                                 <segue destination="s0u-Vh-gty" kind="modal" modalTransitionStyle="flipHorizontal" id="E1I-TP-1Pk"/>
@@ -642,6 +642,81 @@
         <image name="log.png" width="23" height="25"/>
         <image name="workout.png" width="28" height="10"/>
     </resources>
+    <classes>
+        <class className="AddWorkoutLogViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWorkoutLogViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addSelected:"/>
+                <relationship kind="action" name="cancelSelected:"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="AddWorkoutViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWorkoutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addCategorySelected:"/>
+                <relationship kind="action" name="addWorkoutSelected:"/>
+                <relationship kind="action" name="cancelSelected:"/>
+                <relationship kind="outlet" name="pickerView" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="txtWorkoutCategory" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtWorkoutName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="AddWrokoutRoutineViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddWrokoutRoutineViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addSelected:"/>
+                <relationship kind="action" name="cancelSelected:"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="txtRoutineName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="BaseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
+        </class>
+        <class className="WorkoutLogCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutLogCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="bottomView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="lblReps" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblWeight" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblWorkoutName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="WorkoutLogDetailViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutLogDetailViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelSelected:"/>
+                <relationship kind="action" name="doneSelected:"/>
+                <relationship kind="action" name="repStepperDidChange:"/>
+                <relationship kind="action" name="textFieldDidChangeValue:"/>
+                <relationship kind="action" name="weightStepperDidChange:"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="repStepper" candidateClass="UIStepper"/>
+                <relationship kind="outlet" name="txtRep" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtWeight" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="weightStepper" candidateClass="UIStepper"/>
+            </relationships>
+        </class>
+        <class className="WorkoutLogsViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutLogsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WorkoutRoutinesViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutRoutinesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WorkoutsViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutsViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

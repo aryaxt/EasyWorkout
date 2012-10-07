@@ -113,7 +113,7 @@
 {
 	if (section == 0)
 	{
-		return @"Workout Routines";
+		return @"Routines";
 	}
 	else
 	{
