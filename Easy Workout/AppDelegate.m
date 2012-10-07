@@ -7,12 +7,18 @@
 //
 
 #import "AppDelegate.h"
+#import "Workout.h"
+#import "WorkoutGroup.h"
+#import "WorkoutCategory.h"
+#import "Workout.h"
+#import "CoreDataManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	[self setAppearanceSettings];
+	[self populateInitialData];
 	
     // Override point for customization after application launch.
     return YES;
@@ -52,6 +58,61 @@
 	[[UINavigationBar appearance] setTintColor:color];
 	[[UIToolbar appearance] setTintColor:color];
 	[[UITabBar appearance] setTintColor:color];
+}
+
+- (void)populateInitialData
+{
+	static NSString *initialDataPopulationPreference = @"initialDataPopulationPreference";
+	
+	if (![[NSUserDefaults standardUserDefaults] objectForKey:@""])
+	{
+		WorkoutCategory *bicepCategory = [WorkoutCategory getInstance];
+		bicepCategory.name = @"Bicep";
+		
+		WorkoutCategory *tricepCategory = [WorkoutCategory getInstance];
+		tricepCategory.name = @"Tricep";
+		
+		WorkoutCategory *backCategory = [WorkoutCategory getInstance];
+		backCategory.name = @"Back";
+		
+		WorkoutCategory *shoulderCategory = [WorkoutCategory getInstance];
+		shoulderCategory.name = @"Shoulder";
+		
+		WorkoutCategory *legCategory = [WorkoutCategory getInstance];
+		legCategory.name = @"Leg";
+		
+		
+		Workout *workout1 = [Workout getInstance];
+		workout1.name = @"Bicep Curl";
+		workout1.category = bicepCategory;
+		
+		Workout *workout2 = [Workout getInstance];
+		workout2.name = @"Rotating Bicep Curl";
+		workout2.category = bicepCategory;
+		
+		Workout *workout3 = [Workout getInstance];
+		workout3.name = @"Tricep Extension";
+		workout3.category = tricepCategory;
+		
+		Workout *workout4 = [Workout getInstance];
+		workout4.name = @"Shoulder Shrugs";
+		workout4.category = shoulderCategory;
+		
+		Workout *workout5 = [Workout getInstance];
+		workout5.name = @"Lateral Deltoid";
+		workout5.category = shoulderCategory;
+		
+		Workout *workout6 = [Workout getInstance];
+		workout6.name = @"Leg Extension";
+		workout6.category = legCategory;
+		
+		Workout *workout7 = [Workout getInstance];
+		workout7.name = @"Leg Curl";
+		workout7.category = legCategory;
+		
+		[[CoreDataManager sharedManager] saveContext];
+		[[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:initialDataPopulationPreference];
+	}
 }
 
 @end
