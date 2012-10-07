@@ -45,9 +45,12 @@
 
 - (void)populateSelectedCategory
 {
-	NSInteger index = [self.pickerView selectedRowInComponent:0];
-	WorkoutCategory *category = [self.categories objectAtIndex:index];
-	self.txtWorkoutCategory.text = category.name;
+	if (self.categories.count)
+	{
+		NSInteger index = [self.pickerView selectedRowInComponent:0];
+		WorkoutCategory *category = [self.categories objectAtIndex:index];
+		self.txtWorkoutCategory.text = category.name;
+	}
 }
 
 #pragma mark - UITextFieldDelegate Methods -
@@ -105,7 +108,9 @@
 			{
 				WorkoutCategory *category = [WorkoutCategory getInstance];
 				category.name = alertInput;
+				
 				[self populateData];
+				[self populateSelectedCategory];
 			}
 			else
 			{
@@ -124,7 +129,7 @@
 
 - (IBAction)addWorkoutSelected:(id)sender
 {
-	if (self.txtWorkoutName.text.length)
+	if (self.txtWorkoutName.text.length && self.categories.count)
 	{
 		Workout *workout = [Workout getInstance];
 		workout.name = self.txtWorkoutName.text;
@@ -133,12 +138,21 @@
 		
 		[self dismissModalViewControllerAnimated:YES];
 	}
+	else
+	{
+		UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Add Workout"
+															message:@"Workout and category names are required"
+														   delegate:self
+												  cancelButtonTitle:@"Ok"
+												  otherButtonTitles:nil];
+		[alertView show];
+	}
 }
 
 - (IBAction)addCategorySelected:(id)sender
 {
-	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Add Category"
-														message:@"Enter a category please."
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Add Workout"
+														message:@"Workout and category names are required"
 													   delegate:self
 											  cancelButtonTitle:@"Cancel"
 											  otherButtonTitles:@"Add", nil];
