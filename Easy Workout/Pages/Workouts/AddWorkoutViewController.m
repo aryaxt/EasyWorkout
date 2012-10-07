@@ -98,9 +98,24 @@
 		
 		if (alertInput.length)
 		{
-			WorkoutCategory *category = [WorkoutCategory getInstance];
-			category.name = alertInput;
-			[self populateData];
+			NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name CONTAINS[c] %@", alertInput];
+			NSArray *existingCategoryWithName = [WorkoutCategory getInstancesWithPredicate:predicate andSortDescriptor:nil];
+			
+			if (existingCategoryWithName.count == 0)
+			{
+				WorkoutCategory *category = [WorkoutCategory getInstance];
+				category.name = alertInput;
+				[self populateData];
+			}
+			else
+			{
+				UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Add Category"
+																	message:@"Category name already exists."
+																   delegate:nil
+														  cancelButtonTitle:@"Ok"
+														  otherButtonTitles:nil];
+				[alertView show];
+			}
 		}
 	}
 }
