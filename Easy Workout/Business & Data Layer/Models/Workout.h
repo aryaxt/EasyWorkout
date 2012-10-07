@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "CoreDataModel.h"
 
-@class WorkoutCategory, WorkoutGroup, WorkoutLog;
+@class WorkoutCategory, WorkoutRoutine, WorkoutLog;
 
 @interface Workout : CoreDataModel
 
@@ -18,6 +18,6 @@
 @property (nonatomic, retain) NSString * desc;
 @property (nonatomic, retain) WorkoutCategory *category;
 @property (nonatomic, retain) NSSet *workoutLog;
-@property (nonatomic, retain) NSSet *workoutGroup;
+@property (nonatomic, retain) NSSet *workoutRoutine;
 
 @end

@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Workout.h"
-#import "WorkoutGroup.h"
+#import "WorkoutRoutine.h"
 #import "WorkoutCategory.h"
 #import "Workout.h"
 #import "CoreDataManager.h"
@@ -64,7 +64,7 @@
 {
 	static NSString *initialDataPopulationPreference = @"initialDataPopulationPreference";
 	
-	if (![[NSUserDefaults standardUserDefaults] objectForKey:@""])
+	if (![[NSUserDefaults standardUserDefaults] objectForKey:initialDataPopulationPreference])
 	{
 		WorkoutCategory *bicepCategory = [WorkoutCategory getInstance];
 		bicepCategory.name = @"Bicep";

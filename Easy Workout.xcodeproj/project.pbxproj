@@ -16,7 +16,7 @@
 		159284881619AC8700690188 /* iWorkout.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1592844D1619AC8700690188 /* iWorkout.xcdatamodeld */; };
 		159284891619AC8700690188 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284511619AC8700690188 /* Workout.m */; };
 		1592848A1619AC8700690188 /* WorkoutCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284531619AC8700690188 /* WorkoutCategory.m */; };
-		1592848B1619AC8700690188 /* WorkoutGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284551619AC8700690188 /* WorkoutGroup.m */; };
+		1592848B1619AC8700690188 /* WorkoutRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284551619AC8700690188 /* WorkoutRoutine.m */; };
 		1592848C1619AC8700690188 /* WorkoutLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284571619AC8700690188 /* WorkoutLog.m */; };
 		1592848D1619AC8700690188 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592845A1619AC8700690188 /* NSString+Additions.m */; };
 		1592848E1619AC8700690188 /* UIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592845C1619AC8700690188 /* UIViewController+Additions.m */; };
@@ -26,8 +26,6 @@
 		159284921619AC8700690188 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 159284631619AC8700690188 /* MainStoryboard_iPhone.storyboard */; };
 		159284931619AC8700690188 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284651619AC8700690188 /* main.m */; };
 		159284941619AC8700690188 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284691619AC8700690188 /* BaseViewController.m */; };
-		159284951619AC8700690188 /* AddWrokoutGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592846C1619AC8700690188 /* AddWrokoutGroupViewController.m */; };
-		159284961619AC8700690188 /* WorkoutGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592846E1619AC8700690188 /* WorkoutGroupsViewController.m */; };
 		159284971619AC8700690188 /* AddWorkoutLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284711619AC8700690188 /* AddWorkoutLogViewController.m */; };
 		159284981619AC8700690188 /* WorkoutLogCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284731619AC8700690188 /* WorkoutLogCell.m */; };
 		159284991619AC8700690188 /* WorkoutLogDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284751619AC8700690188 /* WorkoutLogDetailViewController.m */; };
@@ -46,6 +44,10 @@
 		159C9A01161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C9A00161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m */; };
 		159C9A04161D6D5400CCAFD9 /* UITabBarController+Customized.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C9A03161D6D5400CCAFD9 /* UITabBarController+Customized.m */; };
 		15BC03A31620E1590008323C /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BC03A21620E1590008323C /* delete.png */; };
+		15BC03AA1620FD9F0008323C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BC03A91620FD9F0008323C /* icon.png */; };
+		15BC03AD1620FDF30008323C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BC03AC1620FDF30008323C /* icon.png */; };
+		15BC03B3162103F90008323C /* AddWrokoutRoutineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC03B0162103F90008323C /* AddWrokoutRoutineViewController.m */; };
+		15BC03B4162103F90008323C /* WorkoutRoutinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC03B2162103F90008323C /* WorkoutRoutinesViewController.m */; };
 		15C107961617EE4100B1B9FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107951617EE4100B1B9FB /* UIKit.framework */; };
 		15C107981617EE4100B1B9FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107971617EE4100B1B9FB /* Foundation.framework */; };
 		15C1079A1617EE4100B1B9FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107991617EE4100B1B9FB /* CoreGraphics.framework */; };
@@ -81,8 +83,8 @@
 		159284511619AC8700690188 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
 		159284521619AC8700690188 /* WorkoutCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutCategory.h; sourceTree = "<group>"; };
 		159284531619AC8700690188 /* WorkoutCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutCategory.m; sourceTree = "<group>"; };
-		159284541619AC8700690188 /* WorkoutGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutGroup.h; sourceTree = "<group>"; };
-		159284551619AC8700690188 /* WorkoutGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutGroup.m; sourceTree = "<group>"; };
+		159284541619AC8700690188 /* WorkoutRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutRoutine.h; sourceTree = "<group>"; };
+		159284551619AC8700690188 /* WorkoutRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutRoutine.m; sourceTree = "<group>"; };
 		159284561619AC8700690188 /* WorkoutLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutLog.h; sourceTree = "<group>"; };
 		159284571619AC8700690188 /* WorkoutLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutLog.m; sourceTree = "<group>"; };
 		159284591619AC8700690188 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
@@ -97,10 +99,6 @@
 		159284651619AC8700690188 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		159284681619AC8700690188 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		159284691619AC8700690188 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		1592846B1619AC8700690188 /* AddWrokoutGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWrokoutGroupViewController.h; sourceTree = "<group>"; };
-		1592846C1619AC8700690188 /* AddWrokoutGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWrokoutGroupViewController.m; sourceTree = "<group>"; };
-		1592846D1619AC8700690188 /* WorkoutGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutGroupsViewController.h; sourceTree = "<group>"; };
-		1592846E1619AC8700690188 /* WorkoutGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutGroupsViewController.m; sourceTree = "<group>"; };
 		159284701619AC8700690188 /* AddWorkoutLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWorkoutLogViewController.h; sourceTree = "<group>"; };
 		159284711619AC8700690188 /* AddWorkoutLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWorkoutLogViewController.m; sourceTree = "<group>"; };
 		159284721619AC8700690188 /* WorkoutLogCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutLogCell.h; sourceTree = "<group>"; };
@@ -130,6 +128,12 @@
 		159C9A02161D6D5400CCAFD9 /* UITabBarController+Customized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+Customized.h"; sourceTree = "<group>"; };
 		159C9A03161D6D5400CCAFD9 /* UITabBarController+Customized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+Customized.m"; sourceTree = "<group>"; };
 		15BC03A21620E1590008323C /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		15BC03A91620FD9F0008323C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		15BC03AC1620FDF30008323C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		15BC03AF162103F90008323C /* AddWrokoutRoutineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWrokoutRoutineViewController.h; sourceTree = "<group>"; };
+		15BC03B0162103F90008323C /* AddWrokoutRoutineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWrokoutRoutineViewController.m; sourceTree = "<group>"; };
+		15BC03B1162103F90008323C /* WorkoutRoutinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutRoutinesViewController.h; sourceTree = "<group>"; };
+		15BC03B2162103F90008323C /* WorkoutRoutinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutRoutinesViewController.m; sourceTree = "<group>"; };
 		15C107911617EE4100B1B9FB /* Easy Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C107951617EE4100B1B9FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		15C107971617EE4100B1B9FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -224,8 +228,8 @@
 				159284511619AC8700690188 /* Workout.m */,
 				159284521619AC8700690188 /* WorkoutCategory.h */,
 				159284531619AC8700690188 /* WorkoutCategory.m */,
-				159284541619AC8700690188 /* WorkoutGroup.h */,
-				159284551619AC8700690188 /* WorkoutGroup.m */,
+				159284541619AC8700690188 /* WorkoutRoutine.h */,
+				159284551619AC8700690188 /* WorkoutRoutine.m */,
 				159284561619AC8700690188 /* WorkoutLog.h */,
 				159284571619AC8700690188 /* WorkoutLog.m */,
 			);
@@ -259,25 +263,14 @@
 		159284671619AC8700690188 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				15BC03AE162103F90008323C /* Routines */,
 				159C99DA161BE85E00CCAFD9 /* Usable UI */,
 				159284781619AC8700690188 /* Workouts */,
 				1592846F1619AC8700690188 /* Logs */,
-				1592846A1619AC8700690188 /* Groups */,
 				159284681619AC8700690188 /* BaseViewController.h */,
 				159284691619AC8700690188 /* BaseViewController.m */,
 			);
 			path = Pages;
-			sourceTree = "<group>";
-		};
-		1592846A1619AC8700690188 /* Groups */ = {
-			isa = PBXGroup;
-			children = (
-				1592846B1619AC8700690188 /* AddWrokoutGroupViewController.h */,
-				1592846C1619AC8700690188 /* AddWrokoutGroupViewController.m */,
-				1592846D1619AC8700690188 /* WorkoutGroupsViewController.h */,
-				1592846E1619AC8700690188 /* WorkoutGroupsViewController.m */,
-			);
-			path = Groups;
 			sourceTree = "<group>";
 		};
 		1592846F1619AC8700690188 /* Logs */ = {
@@ -321,6 +314,7 @@
 		159C99E1161BE95F00CCAFD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				15BC03A91620FD9F0008323C /* icon.png */,
 				15BC03A21620E1590008323C /* delete.png */,
 				159C99EC161C023C00CCAFD9 /* group.png */,
 				159C99ED161C023C00CCAFD9 /* log.png */,
@@ -330,9 +324,21 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		15BC03AE162103F90008323C /* Routines */ = {
+			isa = PBXGroup;
+			children = (
+				15BC03AF162103F90008323C /* AddWrokoutRoutineViewController.h */,
+				15BC03B0162103F90008323C /* AddWrokoutRoutineViewController.m */,
+				15BC03B1162103F90008323C /* WorkoutRoutinesViewController.h */,
+				15BC03B2162103F90008323C /* WorkoutRoutinesViewController.m */,
+			);
+			path = Routines;
+			sourceTree = "<group>";
+		};
 		15C107861617EE4100B1B9FB = {
 			isa = PBXGroup;
 			children = (
+				15BC03AC1620FDF30008323C /* icon.png */,
 				159284441619AC8700690188 /* Easy Workout */,
 				156D5DEC1619ADC700DA84AA /* Easy WorkoutTests */,
 				15C107941617EE4100B1B9FB /* Frameworks */,
@@ -443,6 +449,8 @@
 				159C99F0161C023C00CCAFD9 /* log.png in Resources */,
 				159C99F1161C023C00CCAFD9 /* workout.png in Resources */,
 				15BC03A31620E1590008323C /* delete.png in Resources */,
+				15BC03AA1620FD9F0008323C /* icon.png in Resources */,
+				15BC03AD1620FDF30008323C /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,14 +492,12 @@
 				159284881619AC8700690188 /* iWorkout.xcdatamodeld in Sources */,
 				159284891619AC8700690188 /* Workout.m in Sources */,
 				1592848A1619AC8700690188 /* WorkoutCategory.m in Sources */,
-				1592848B1619AC8700690188 /* WorkoutGroup.m in Sources */,
+				1592848B1619AC8700690188 /* WorkoutRoutine.m in Sources */,
 				1592848C1619AC8700690188 /* WorkoutLog.m in Sources */,
 				1592848D1619AC8700690188 /* NSString+Additions.m in Sources */,
 				1592848E1619AC8700690188 /* UIViewController+Additions.m in Sources */,
 				159284931619AC8700690188 /* main.m in Sources */,
 				159284941619AC8700690188 /* BaseViewController.m in Sources */,
-				159284951619AC8700690188 /* AddWrokoutGroupViewController.m in Sources */,
-				159284961619AC8700690188 /* WorkoutGroupsViewController.m in Sources */,
 				159284971619AC8700690188 /* AddWorkoutLogViewController.m in Sources */,
 				159284981619AC8700690188 /* WorkoutLogCell.m in Sources */,
 				159284991619AC8700690188 /* WorkoutLogDetailViewController.m in Sources */,
@@ -502,6 +508,8 @@
 				159C99E8161BF20500CCAFD9 /* UIView+Additions.m in Sources */,
 				159C9A01161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m in Sources */,
 				159C9A04161D6D5400CCAFD9 /* UITabBarController+Customized.m in Sources */,
+				15BC03B3162103F90008323C /* AddWrokoutRoutineViewController.m in Sources */,
+				15BC03B4162103F90008323C /* WorkoutRoutinesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

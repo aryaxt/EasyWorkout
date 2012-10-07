@@ -8,7 +8,7 @@
 
 #import "Workout.h"
 #import "WorkoutCategory.h"
-#import "WorkoutGroup.h"
+#import "WorkoutRoutine.h"
 #import "WorkoutLog.h"
 
 
@@ -18,6 +18,6 @@
 @dynamic desc;
 @dynamic category;
 @dynamic workoutLog;
-@dynamic workoutGroup;
+@dynamic workoutRoutine;
 
 @end

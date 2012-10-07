@@ -9,7 +9,7 @@
 #import "AddWorkoutLogViewController.h"
 
 @implementation AddWorkoutLogViewController
-@synthesize workoutGroups = _workoutGroups;
+@synthesize workoutRoutines = _workoutRoutines;
 @synthesize workouts = _workouts;
 @synthesize tableView = _tableView;
 @synthesize delegate = _delegate;
@@ -22,7 +22,7 @@
 	
 	dispatch_async(dispatch_get_main_queue(), ^{
 		self.workouts = [Workout getInstancesWithPredicate:nil andSortDescriptor:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
-		self.workoutGroups = [WorkoutGroup getInstancesWithPredicate:nil
+		self.workoutRoutines = [WorkoutRoutine getInstancesWithPredicate:nil
 												   andSortDescriptor:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
 	});
 }
@@ -41,8 +41,8 @@
 		{
 			if (indexPath.section == 0)
 			{
-				WorkoutGroup *group = [self.workoutGroups objectAtIndex:indexPath.row];
-				[workouts addObjectsFromArray:group.workouts.allObjects];
+				WorkoutRoutine *routine = [self.workoutRoutines objectAtIndex:indexPath.row];
+				[workouts addObjectsFromArray:routine.workouts.allObjects];
 			}
 			else
 			{
@@ -81,7 +81,7 @@
 {
 	if (section == 0)
 	{
-		return self.workoutGroups.count;
+		return self.workoutRoutines.count;
 	}
 	else
 	{
@@ -97,8 +97,8 @@
 	
 	if (indexPath.section == 0)
 	{
-		WorkoutGroup *group = [self.workoutGroups objectAtIndex:indexPath.row];
-		cell.textLabel.text = group.name;
+		WorkoutRoutine *routine = [self.workoutRoutines objectAtIndex:indexPath.row];
+		cell.textLabel.text = routine.name;
 	}
 	else
 	{
@@ -113,7 +113,7 @@
 {
 	if (section == 0)
 	{
-		return @"Workout Groups";
+		return @"Workout Routines";
 	}
 	else
 	{

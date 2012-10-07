@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 #import "Workout.h"
-#import "WorkoutGroup.h"
+#import "WorkoutRoutine.h"
 
 @protocol AddWorkoutLogViewControllerDelegate <NSObject>
 - (void)addWorkoutLogViewControllerDidSelectWorkouts:(NSArray *)workouts;
@@ -18,7 +18,7 @@
 @interface AddWorkoutLogViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) id <AddWorkoutLogViewControllerDelegate> delegate;
-@property (nonatomic, strong) NSArray *workoutGroups;
+@property (nonatomic, strong) NSArray *workoutRoutines;
 @property (nonatomic, strong) NSArray *workouts;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
