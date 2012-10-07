@@ -1,5 +1,5 @@
 //
-//  AddWrokoutGroupViewController.h
+//  AddWrokoutRoutineViewController.h
 //  iWorkout
 //
 //  Created by Aryan Gh on 9/30/12.
@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-#import "WorkoutGroup.h"
+#import "WorkoutRoutine.h"
 #import "Workout.h"
 
-@interface AddWrokoutGroupViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+@interface AddWrokoutRoutineViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic, strong) NSArray *workouts;
-@property (nonatomic, strong) IBOutlet UITextField *txtGroupName;
+@property (nonatomic, strong) IBOutlet UITextField *txtRoutineName;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 - (IBAction)addSelected:(id)sender;

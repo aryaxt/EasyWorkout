@@ -1,5 +1,5 @@
 //
-//  WorkoutGroupsViewController.h
+//  WorkoutRoutinesViewController.h
 //  iWorkout
 //
 //  Created by Aryan Gh on 9/30/12.
@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
-#import "WorkoutGroup.h"
+#import "WorkoutRoutine.h"
 #import "Workout.h"
 #import "CellExpandableHeaderView.h"
 
-@interface WorkoutGroupsViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, CellExpandableHeaderViewDelegate, UIAlertViewDelegate>
+@interface WorkoutRoutinesViewController : BaseViewController <UITableViewDataSource, UITableViewDelegate, CellExpandableHeaderViewDelegate, UIAlertViewDelegate>
 
-@property (nonatomic, strong) NSMutableDictionary *workoutGroupsDictionary;
-@property (nonatomic, strong) NSArray *workoutGroups;
+@property (nonatomic, strong) NSMutableDictionary *workoutRoutinesDictionary;
+@property (nonatomic, strong) NSArray *workoutRoutines;
 @property (nonatomic, strong) NSMutableArray *expandedSections;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 

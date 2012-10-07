@@ -1,23 +1,23 @@
 //
-//  WorkoutGroupsViewController.m
+//  WorkoutRoutinesViewController.m
 //  iWorkout
 //
 //  Created by Aryan Gh on 9/30/12.
 //  Copyright (c) 2012 Aryan Gh. All rights reserved.
 //
 
-#import "WorkoutGroupsViewController.h"
+#import "WorkoutRoutinesViewController.h"
 
-@implementation WorkoutGroupsViewController
+@implementation WorkoutRoutinesViewController
 @synthesize tableView = _tableView;
-@synthesize workoutGroupsDictionary = _workoutGroupsDictionary;
+@synthesize workoutRoutinesDictionary = _workoutRoutinesDictionary;
 @synthesize expandedSections = _expandedSections;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
-	self.workoutGroupsDictionary = [NSMutableDictionary dictionary];
+	self.workoutRoutinesDictionary = [NSMutableDictionary dictionary];
 	self.expandedSections = [NSMutableArray array];
 }
 
@@ -25,20 +25,20 @@
 {
 	[super viewWillAppear:animated];
 	
-	[self populateWorkoutGroups];
+	[self populateWorkoutRoutines];
 	[self.tableView reloadData];
 }
 
 #pragma mark - Private Methods -
 
-- (void)populateWorkoutGroups
+- (void)populateWorkoutRoutines
 {
-	[self.workoutGroupsDictionary removeAllObjects];
-	self.workoutGroups = [WorkoutGroup getInstancesWithPredicate:nil andSortDescriptor:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+	[self.workoutRoutinesDictionary removeAllObjects];
+	self.workoutRoutines = [WorkoutRoutine getInstancesWithPredicate:nil andSortDescriptor:[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
 	
-	for (WorkoutGroup *group in self.workoutGroups)
+	for (WorkoutRoutine *routine in self.workoutRoutines)
 	{
-		[self.workoutGroupsDictionary setObject:group.workouts.allObjects forKey:group.name];
+		[self.workoutRoutinesDictionary setObject:routine.workouts.allObjects forKey:routine.name];
 	}
 }
 
@@ -73,7 +73,7 @@
 
 - (void)cellExpandableHeaderViewDidSelectDeleteInSection:(NSInteger)section
 {
-	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Delete Group" message:@"Are you sure you want to delete this group?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Delete Routine" message:@"Are you sure you want to delete this workout routine?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
 	alertView.tag = section;
 	[alertView show];
 }
@@ -84,10 +84,10 @@
 {
 	if (buttonIndex)
 	{
-		WorkoutGroup *group = [self.workoutGroups objectAtIndex:alertView.tag];
-		[group delete];
+		WorkoutRoutine *routine = [self.workoutRoutines objectAtIndex:alertView.tag];
+		[routine delete];
 		
-		[self populateWorkoutGroups];
+		[self populateWorkoutRoutines];
 		[self.tableView deleteSections:[NSIndexSet indexSetWithIndex:alertView.tag]
 					  withRowAnimation:UITableViewRowAnimationAutomatic];
 		
@@ -97,34 +97,26 @@
 	}
 }
 
-#pragma mark - WorkoutGroupHeaderViewDelegate Methods -
-
-- (void)workoutGroupHeaderViewDidSelectDeleteForWorkoutGroup:(WorkoutGroup *)group
-{
-	[group delete];
-	[self populateWorkoutGroups];
-}
-
 #pragma mark - UITableView Delegate & Datasrouce -
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	return self.workoutGroups.count;
+	return self.workoutRoutines.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	WorkoutGroup *group = [self.workoutGroups objectAtIndex:section];
-	NSArray *workouts = [self.workoutGroupsDictionary objectForKey:group.name];
+	WorkoutRoutine *routine = [self.workoutRoutines objectAtIndex:section];
+	NSArray *workouts = [self.workoutRoutinesDictionary objectForKey:routine.name];
 	return workouts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WorkoutGroupCell"];
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WorkoutRoutineCell"];
 	
-	WorkoutGroup *group = [self.workoutGroups objectAtIndex:indexPath.section];
-	NSArray *workouts = [self.workoutGroupsDictionary objectForKey:group.name];
+	WorkoutRoutine *routine = [self.workoutRoutines objectAtIndex:indexPath.section];
+	NSArray *workouts = [self.workoutRoutinesDictionary objectForKey:routine.name];
 	Workout *workout = [workouts objectAtIndex:indexPath.row];
 	cell.textLabel.text = workout.name;
 	return cell;
@@ -132,10 +124,10 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-	WorkoutGroup *group = [self.workoutGroups objectAtIndex:section];
+	WorkoutRoutine *routine = [self.workoutRoutines objectAtIndex:section];
 	
 	CellExpandableHeaderView *header = [[CellExpandableHeaderView alloc] initWithSection:section];
-	[header setTitle:group.name];
+	[header setTitle:routine.name];
 	[header setDelegate:self];
 	[header setExpanded:([self isHeaderExpandedInSection:section]) ? YES : NO animated:NO];
 	return header;
@@ -167,13 +159,13 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
 	{
-        WorkoutGroup *group = [self.workoutGroups objectAtIndex:indexPath.section];
+        WorkoutRoutine *routine = [self.workoutRoutines objectAtIndex:indexPath.section];
 		
-		NSMutableArray *workouts = [NSMutableArray arrayWithArray:[self.workoutGroupsDictionary objectForKey:group.name]];
+		NSMutableArray *workouts = [NSMutableArray arrayWithArray:[self.workoutRoutinesDictionary objectForKey:routine.name]];
 		Workout *workout = [workouts objectAtIndex:indexPath.row];
 		[workouts removeObject:workout];
-		group.workouts = [NSSet setWithArray:workouts];
-		[self populateWorkoutGroups];
+		routine.workouts = [NSSet setWithArray:workouts];
+		[self populateWorkoutRoutines];
 		[self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
 							  withRowAnimation:UITableViewRowAnimationAutomatic];
     }

@@ -1,16 +1,16 @@
 //
-//  AddWrokoutGroupViewController.m
+//  AddWrokoutRoutineViewController.m
 //  iWorkout
 //
 //  Created by Aryan Gh on 9/30/12.
 //  Copyright (c) 2012 Aryan Gh. All rights reserved.
 //
 
-#import "AddWrokoutGroupViewController.h"
+#import "AddWrokoutRoutineViewController.h"
 
-@implementation AddWrokoutGroupViewController
+@implementation AddWrokoutRoutineViewController
 @synthesize workouts = _workouts;
-@synthesize txtGroupName = _txtGroupName;
+@synthesize txtRoutineName = _txtRoutineName;
 @synthesize tableView = _tableView;
 
 #pragma mark - UIViewController -
@@ -25,7 +25,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
-	[self.txtGroupName becomeFirstResponder];
+	[self.txtRoutineName becomeFirstResponder];
 }
 
 #pragma mark - Private Methods -
@@ -48,7 +48,7 @@
 {
 	Workout *workout = [self.workouts objectAtIndex:indexPath.row];
 	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WorkoutGroupWorkoutCell"];
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WorkoutRoutineWorkoutCell"];
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	cell.textLabel.text = workout.name;
 	cell.accessoryType = ([[self.tableView indexPathsForSelectedRows] containsObject:indexPath]) ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
@@ -78,10 +78,10 @@
 
 - (IBAction)addSelected:(id)sender
 {
-	if (self.txtGroupName.text.length && [self.tableView indexPathsForSelectedRows].count)
+	if (self.txtRoutineName.text.length && [self.tableView indexPathsForSelectedRows].count)
 	{
-		WorkoutGroup *group = [WorkoutGroup getInstance];
-		group.name = self.txtGroupName.text;
+		WorkoutRoutine *routine = [WorkoutRoutine getInstance];
+		routine.name = self.txtRoutineName.text;
 		
 		NSMutableArray *workouts = [NSMutableArray array];
 		for (NSIndexPath *indexPath in [self.tableView indexPathsForSelectedRows])
@@ -90,7 +90,7 @@
 			[workouts addObject:workout];
 		}
 		
-		group.workouts = [NSSet setWithArray:workouts];
+		routine.workouts = [NSSet setWithArray:workouts];
 	
 		[self dismissModalViewControllerAnimated:YES];
 	}
