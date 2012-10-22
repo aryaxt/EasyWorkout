@@ -29,6 +29,8 @@
 	[super viewWillAppear:animated];
 	[self populateData];
 	[self.tableView reloadData];
+	
+	[self.googleAnalyticsHelper trackPage:GoogleAnalyticsHelperPageWorkouts];
 }
 
 #pragma mark - Private Mthods -

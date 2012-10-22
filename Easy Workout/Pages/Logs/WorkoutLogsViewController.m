@@ -28,6 +28,8 @@
 	self.selectedDate = [NSDate date];
 	[self populateData];
 	[self.tableView reloadData];
+	
+	[self.googleAnalyticsHelper trackPage:GoogleAnalyticsHelperPageWorkoutLogs];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

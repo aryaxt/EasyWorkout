@@ -12,6 +12,7 @@
 #import "WorkoutCategory.h"
 #import "Workout.h"
 #import "CoreDataManager.h"
+#import "GoogleAnalyticsHelper.h"
 
 @implementation AppDelegate
 
@@ -19,6 +20,7 @@
 {
 	[self setAppearanceSettings];
 	[self populateInitialData];
+	[GoogleAnalyticsHelper sharedInstance];
 	
     // Override point for customization after application launch.
     return YES;
@@ -94,25 +96,41 @@
 		workout3.name = @"Tricep Extension";
 		workout3.category = tricepCategory;
 		
+		Workout *workout11 = [Workout getInstance];
+		workout11.name = @"Bench Dips";
+		workout11.category = tricepCategory;
+		
 		Workout *workout4 = [Workout getInstance];
 		workout4.name = @"Shoulder Shrugs";
 		workout4.category = shoulderCategory;
 		
 		Workout *workout5 = [Workout getInstance];
-		workout5.name = @"Lateral Deltoid";
+		workout5.name = @"Shoulder Press";
 		workout5.category = shoulderCategory;
 		
 		Workout *workout6 = [Workout getInstance];
-		workout6.name = @"Leg Extension";
-		workout6.category = legCategory;
+		workout6.name = @"Lateral Deltoid";
+		workout6.category = shoulderCategory;
 		
 		Workout *workout7 = [Workout getInstance];
-		workout7.name = @"Leg Curl";
+		workout7.name = @"Leg Extension";
 		workout7.category = legCategory;
+		
+		Workout *workout8 = [Workout getInstance];
+		workout8.name = @"Leg Curl";
+		workout8.category = legCategory;
+		
+		Workout *workout9 = [Workout getInstance];
+		workout9.name = @"Lat Pull-Downs";
+		workout9.category = backCategory;
+		
+		Workout *workout10 = [Workout getInstance];
+		workout10.name = @"Seated Cable Rows";
+		workout10.category = backCategory;
 		
 		WorkoutRoutine *routine = [WorkoutRoutine getInstance];
 		routine.name = @"Shoulder & Arms Day";
-		routine.workouts = [NSSet setWithObjects:workout5, workout4, workout3, workout2, workout1, nil];
+		routine.workouts = [NSSet setWithObjects:workout5, workout4, workout3, workout2, workout1, workout11, nil];
 		
 		[[CoreDataManager sharedManager] saveContext];
 		[[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:initialDataPopulationPreference];

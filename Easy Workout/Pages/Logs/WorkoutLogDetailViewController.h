@@ -26,7 +26,6 @@
 @property (nonatomic, strong) IBOutlet UIStepper *weightStepper;
 @property (nonatomic, strong) IBOutlet UITextField *txtRep;
 @property (nonatomic, strong) IBOutlet UITextField *txtWeight;
-@property (nonatomic, strong) IBOutlet UINavigationBar *navigationBar;
 
 - (IBAction)repStepperDidChange:(id)sender;
 - (IBAction)weightStepperDidChange:(id)sender;

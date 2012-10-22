@@ -14,13 +14,14 @@
 @synthesize txtWeight = _txtWeight;
 @synthesize repStepper = _repStepper;
 @synthesize weightStepper = _weightStepper;
-@synthesize navigationBar = _navigationBar;
 
 #pragma mark - UIViewController Methods -
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+	[super viewWillAppear:animated];
+	
+	[self.googleAnalyticsHelper trackPage:GoogleAnalyticsHelperPageWorkoutLogDetail];
 }
 
 #pragma mark - IBActions -
@@ -90,9 +91,6 @@
 - (void)setWorkoutLog:(WorkoutLog *)workoutLog
 {
 	_workoutLog = workoutLog;
-	
-	UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:workoutLog.workout.name];
-	[self.navigationBar pushNavigationItem:navigationItem animated:NO];
 	
 	self.txtRep.text = [NSString stringWithFormat:@"%@", workoutLog.reps];
 	self.txtWeight.text = [NSString stringWithFormat:@"%@", workoutLog.weight];

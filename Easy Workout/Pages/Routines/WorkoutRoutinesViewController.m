@@ -27,6 +27,8 @@
 	
 	[self populateWorkoutRoutines];
 	[self.tableView reloadData];
+	
+	[self.googleAnalyticsHelper trackPage:GoogleAnalyticsHelperPageRoutines];
 }
 
 #pragma mark - Private Methods -

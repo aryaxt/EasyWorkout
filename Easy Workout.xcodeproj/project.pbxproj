@@ -7,9 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152C6109163467C5000D2110 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 152C6108163467C5000D2110 /* libGoogleAnalytics.a */; };
+		152C610C163467F2000D2110 /* GoogleAnalyticsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 152C610B163467F2000D2110 /* GoogleAnalyticsHelper.m */; };
+		152C610D16346C6A000D2110 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 152C6108163467C5000D2110 /* libGoogleAnalytics.a */; };
+		152C610F16346CEE000D2110 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152C610E16346CEE000D2110 /* CFNetwork.framework */; };
+		152C611116346CFE000D2110 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 152C611016346CFE000D2110 /* libsqlite3.0.dylib */; };
 		156D5DF21619ADC700DA84AA /* Easy WorkoutTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 156D5DED1619ADC700DA84AA /* Easy WorkoutTests-Info.plist */; };
 		156D5DF31619ADC700DA84AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 156D5DEE1619ADC700DA84AA /* InfoPlist.strings */; };
 		156D5DF41619ADC700DA84AA /* iWorkoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 156D5DF11619ADC700DA84AA /* iWorkoutTests.m */; };
+		15752FEE1634CD76009EF4B0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 15752FED1634CD76009EF4B0 /* Default.png */; };
+		15752FF01634CD7C009EF4B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15752FEF1634CD7C009EF4B0 /* Default@2x.png */; };
+		15752FF21634CD80009EF4B0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 15752FF11634CD80009EF4B0 /* Default-568h@2x.png */; };
+		158BF66B16325C1F00AB1485 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 158BF66516325C1F00AB1485 /* Icon-Small.png */; };
+		158BF66C16325C1F00AB1485 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 158BF66616325C1F00AB1485 /* Icon-Small@2x.png */; };
+		158BF66D16325C1F00AB1485 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 158BF66716325C1F00AB1485 /* Icon.png */; };
+		158BF66E16325C1F00AB1485 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 158BF66816325C1F00AB1485 /* Icon@2x.png */; };
+		158BF67216325C4B00AB1485 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 158BF67116325C4B00AB1485 /* Icon.png */; };
+		158BF67416325C5900AB1485 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 158BF67316325C5900AB1485 /* Icon@2x.png */; };
 		159284851619AC8700690188 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 159284461619AC8700690188 /* AppDelegate.m */; };
 		159284861619AC8700690188 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592844A1619AC8700690188 /* CoreDataManager.m */; };
 		159284871619AC8700690188 /* CoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1592844C1619AC8700690188 /* CoreDataModel.m */; };
@@ -44,8 +58,6 @@
 		159C9A01161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C9A00161D67EF00CCAFD9 /* UINavigationBar+RoundedCorners.m */; };
 		159C9A04161D6D5400CCAFD9 /* UITabBarController+Customized.m in Sources */ = {isa = PBXBuildFile; fileRef = 159C9A03161D6D5400CCAFD9 /* UITabBarController+Customized.m */; };
 		15BC03A31620E1590008323C /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BC03A21620E1590008323C /* delete.png */; };
-		15BC03AA1620FD9F0008323C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BC03A91620FD9F0008323C /* icon.png */; };
-		15BC03AD1620FDF30008323C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 15BC03AC1620FDF30008323C /* icon.png */; };
 		15BC03B3162103F90008323C /* AddWrokoutRoutineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC03B0162103F90008323C /* AddWrokoutRoutineViewController.m */; };
 		15BC03B4162103F90008323C /* WorkoutRoutinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BC03B2162103F90008323C /* WorkoutRoutinesViewController.m */; };
 		15C107961617EE4100B1B9FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C107951617EE4100B1B9FB /* UIKit.framework */; };
@@ -68,10 +80,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		152C6107163467C5000D2110 /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
+		152C6108163467C5000D2110 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		152C610A163467F2000D2110 /* GoogleAnalyticsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleAnalyticsHelper.h; sourceTree = "<group>"; };
+		152C610B163467F2000D2110 /* GoogleAnalyticsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleAnalyticsHelper.m; sourceTree = "<group>"; };
+		152C610E16346CEE000D2110 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		152C611016346CFE000D2110 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		156D5DED1619ADC700DA84AA /* Easy WorkoutTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Easy WorkoutTests-Info.plist"; sourceTree = "<group>"; };
 		156D5DEF1619ADC700DA84AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		156D5DF01619ADC700DA84AA /* iWorkoutTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iWorkoutTests.h; sourceTree = "<group>"; };
 		156D5DF11619ADC700DA84AA /* iWorkoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iWorkoutTests.m; sourceTree = "<group>"; };
+		15752FED1634CD76009EF4B0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		15752FEF1634CD7C009EF4B0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		15752FF11634CD80009EF4B0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		158BF66516325C1F00AB1485 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		158BF66616325C1F00AB1485 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		158BF66716325C1F00AB1485 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		158BF66816325C1F00AB1485 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		158BF67116325C4B00AB1485 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		158BF67316325C5900AB1485 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		159284451619AC8700690188 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		159284461619AC8700690188 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		159284491619AC8700690188 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
@@ -128,8 +155,6 @@
 		159C9A02161D6D5400CCAFD9 /* UITabBarController+Customized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+Customized.h"; sourceTree = "<group>"; };
 		159C9A03161D6D5400CCAFD9 /* UITabBarController+Customized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+Customized.m"; sourceTree = "<group>"; };
 		15BC03A21620E1590008323C /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
-		15BC03A91620FD9F0008323C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		15BC03AC1620FDF30008323C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		15BC03AF162103F90008323C /* AddWrokoutRoutineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWrokoutRoutineViewController.h; sourceTree = "<group>"; };
 		15BC03B0162103F90008323C /* AddWrokoutRoutineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWrokoutRoutineViewController.m; sourceTree = "<group>"; };
 		15BC03B1162103F90008323C /* WorkoutRoutinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutRoutinesViewController.h; sourceTree = "<group>"; };
@@ -148,6 +173,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				152C611116346CFE000D2110 /* libsqlite3.0.dylib in Frameworks */,
+				152C610F16346CEE000D2110 /* CFNetwork.framework in Frameworks */,
+				152C610D16346C6A000D2110 /* libGoogleAnalytics.a in Frameworks */,
 				159C99FE161D66B100CCAFD9 /* QuartzCore.framework in Frameworks */,
 				15C108211617EEC000B1B9FB /* CoreData.framework in Frameworks */,
 				15C107961617EE4100B1B9FB /* UIKit.framework in Frameworks */,
@@ -163,12 +191,24 @@
 				15C107B71617EE4200B1B9FB /* SenTestingKit.framework in Frameworks */,
 				15C107B81617EE4200B1B9FB /* UIKit.framework in Frameworks */,
 				15C107B91617EE4200B1B9FB /* Foundation.framework in Frameworks */,
+				152C6109163467C5000D2110 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		152C6105163467B2000D2110 /* Google Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				152C6107163467C5000D2110 /* GANTracker.h */,
+				152C6108163467C5000D2110 /* libGoogleAnalytics.a */,
+				152C610A163467F2000D2110 /* GoogleAnalyticsHelper.h */,
+				152C610B163467F2000D2110 /* GoogleAnalyticsHelper.m */,
+			);
+			path = "Google Analytics";
+			sourceTree = "<group>";
+		};
 		156D5DEC1619ADC700DA84AA /* Easy WorkoutTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,9 +220,21 @@
 			path = "Easy WorkoutTests";
 			sourceTree = "<group>";
 		};
+		158BF66416325C1F00AB1485 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				158BF66516325C1F00AB1485 /* Icon-Small.png */,
+				158BF66616325C1F00AB1485 /* Icon-Small@2x.png */,
+				158BF66716325C1F00AB1485 /* Icon.png */,
+				158BF66816325C1F00AB1485 /* Icon@2x.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		159284441619AC8700690188 /* Easy Workout */ = {
 			isa = PBXGroup;
 			children = (
+				152C6105163467B2000D2110 /* Google Analytics */,
 				159C99E1161BE95F00CCAFD9 /* Images */,
 				159284581619AC8700690188 /* Categories */,
 				159284471619AC8700690188 /* Business & Data Layer */,
@@ -314,7 +366,7 @@
 		159C99E1161BE95F00CCAFD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				15BC03A91620FD9F0008323C /* icon.png */,
+				158BF66416325C1F00AB1485 /* Icons */,
 				15BC03A21620E1590008323C /* delete.png */,
 				159C99EC161C023C00CCAFD9 /* group.png */,
 				159C99ED161C023C00CCAFD9 /* log.png */,
@@ -338,7 +390,11 @@
 		15C107861617EE4100B1B9FB = {
 			isa = PBXGroup;
 			children = (
-				15BC03AC1620FDF30008323C /* icon.png */,
+				15752FF11634CD80009EF4B0 /* Default-568h@2x.png */,
+				15752FEF1634CD7C009EF4B0 /* Default@2x.png */,
+				15752FED1634CD76009EF4B0 /* Default.png */,
+				158BF67316325C5900AB1485 /* Icon@2x.png */,
+				158BF67116325C4B00AB1485 /* Icon.png */,
 				159284441619AC8700690188 /* Easy Workout */,
 				156D5DEC1619ADC700DA84AA /* Easy WorkoutTests */,
 				15C107941617EE4100B1B9FB /* Frameworks */,
@@ -358,6 +414,8 @@
 		15C107941617EE4100B1B9FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				152C611016346CFE000D2110 /* libsqlite3.0.dylib */,
+				152C610E16346CEE000D2110 /* CFNetwork.framework */,
 				159C99FD161D66B100CCAFD9 /* QuartzCore.framework */,
 				15C108201617EEC000B1B9FB /* CoreData.framework */,
 				15C107951617EE4100B1B9FB /* UIKit.framework */,
@@ -449,8 +507,15 @@
 				159C99F0161C023C00CCAFD9 /* log.png in Resources */,
 				159C99F1161C023C00CCAFD9 /* workout.png in Resources */,
 				15BC03A31620E1590008323C /* delete.png in Resources */,
-				15BC03AA1620FD9F0008323C /* icon.png in Resources */,
-				15BC03AD1620FDF30008323C /* icon.png in Resources */,
+				158BF66B16325C1F00AB1485 /* Icon-Small.png in Resources */,
+				158BF66C16325C1F00AB1485 /* Icon-Small@2x.png in Resources */,
+				158BF66D16325C1F00AB1485 /* Icon.png in Resources */,
+				158BF66E16325C1F00AB1485 /* Icon@2x.png in Resources */,
+				158BF67216325C4B00AB1485 /* Icon.png in Resources */,
+				158BF67416325C5900AB1485 /* Icon@2x.png in Resources */,
+				15752FEE1634CD76009EF4B0 /* Default.png in Resources */,
+				15752FF01634CD7C009EF4B0 /* Default@2x.png in Resources */,
+				15752FF21634CD80009EF4B0 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +575,7 @@
 				159C9A04161D6D5400CCAFD9 /* UITabBarController+Customized.m in Sources */,
 				15BC03B3162103F90008323C /* AddWrokoutRoutineViewController.m in Sources */,
 				15BC03B4162103F90008323C /* WorkoutRoutinesViewController.m in Sources */,
+				152C610C163467F2000D2110 /* GoogleAnalyticsHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,10 +688,19 @@
 		15C107C81617EE4200B1B9FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Easy Workout/Easy Workout-Prefix.pch";
 				INFOPLIST_FILE = "Easy Workout/Easy Workout-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Easy Workout/Google Analytics\"",
+				);
 				PRODUCT_NAME = "Easy Workout";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -633,10 +708,17 @@
 		15C107C91617EE4200B1B9FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Aryan Ghassemi";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Easy Workout/Easy Workout-Prefix.pch";
 				INFOPLIST_FILE = "Easy Workout/Easy Workout-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Easy Workout/Google Analytics\"",
+				);
 				PRODUCT_NAME = "Easy Workout";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -652,6 +734,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iWorkout/iWorkout-Prefix.pch";
 				INFOPLIST_FILE = "iWorkoutTests/Easy WorkoutTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Easy Workout/Google Analytics\"",
+				);
 				PRODUCT_NAME = "Easy WorkoutTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -669,6 +755,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iWorkout/iWorkout-Prefix.pch";
 				INFOPLIST_FILE = "iWorkoutTests/Easy WorkoutTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Easy Workout/Google Analytics\"",
+				);
 				PRODUCT_NAME = "Easy WorkoutTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

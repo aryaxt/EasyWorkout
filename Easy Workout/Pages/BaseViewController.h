@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "GoogleAnalyticsHelper.h"
 
 typedef enum {
 	FormSheetStyleSmall,
@@ -17,6 +18,7 @@ typedef enum {
 @interface BaseViewController : UIViewController
 
 @property (nonatomic, assign) FormSheetStyle formSheetStyle;
+@property (nonatomic, strong) GoogleAnalyticsHelper *googleAnalyticsHelper;
 
 - (void)presentFormSheetViewContorller:(UIViewController *)viewConotrller animated:(BOOL)animated;
 - (void)dismissFormSheetViewControllerAnimated:(BOOL)animated;

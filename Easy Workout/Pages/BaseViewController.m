@@ -17,6 +17,7 @@
 @synthesize formSheetViewConotrller = _formSheetViewConotrller;
 @synthesize keyboardIsVisible = _keyboardIsVisible;
 @synthesize formSheetStyle = _formSheetStyle;
+@synthesize googleAnalyticsHelper = _googleAnalyticsHelper;
 
 static NSInteger FORMSHEET_WITH = 300;
 static NSInteger FORMSHEET_HEIGHT = 190;
@@ -59,7 +60,7 @@ static CGFloat ANIMATION_DURATION = .35;
 	self.formSheetViewConotrller.view.layer.cornerRadius = 5;
 	self.formSheetViewConotrller.view.clipsToBounds = YES;
 	self.formSheetViewConotrller.view.layer.borderColor = [UIColor darkGrayColor].CGColor;
-	self.formSheetViewConotrller.view.layer.borderWidth = 2;
+	self.formSheetViewConotrller.view.layer.borderWidth = 1;
 	
 	__block CGRect rect = CGRectMake((320-FORMSHEET_WITH)/2, 500, FORMSHEET_WITH, FORMSHEET_HEIGHT);
 	self.formSheetViewConotrller.view.frame = rect;
@@ -118,6 +119,18 @@ static CGFloat ANIMATION_DURATION = .35;
 {
 	self.keyboardIsVisible = NO;
 	[self moveFormSheetAccordingly];
+}
+
+#pragma mark - Setter & Getter -
+
+- (GoogleAnalyticsHelper *)googleAnalyticsHelper
+{
+	if (!_googleAnalyticsHelper)
+	{
+		_googleAnalyticsHelper = [[GoogleAnalyticsHelper alloc] init];
+	}
+	
+	return _googleAnalyticsHelper;
 }
 
 @end

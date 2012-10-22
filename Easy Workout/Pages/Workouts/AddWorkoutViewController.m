@@ -27,6 +27,13 @@
 	});
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	
+	[self.googleAnalyticsHelper trackPage:GoogleAnalyticsHelperPageAddWorkouts];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
@@ -158,6 +165,8 @@
 											  otherButtonTitles:@"Add", nil];
 	[alertView setAlertViewStyle:UIAlertViewStylePlainTextInput];
 	[alertView show];
+	
+	[self.googleAnalyticsHelper trackPage:GoogleAnalyticsHelperPageAddWorkoutCategory];
 }
 
 - (IBAction)cancelSelected:(id)sender

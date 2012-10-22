@@ -27,6 +27,13 @@
 	});
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	
+	[self.googleAnalyticsHelper trackPage:GoogleAnalyticsHelperPageAddWorkoutLog];
+}
+
 #pragma mark - IBActions -
 
 - (IBAction)addSelected:(id)sender
