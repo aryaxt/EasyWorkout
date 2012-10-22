@@ -38,9 +38,16 @@
 
 - (IBAction)doneSelected:(id)sender
 {
-	self.workoutLog.reps = [NSNumber numberWithInt:self.txtRep.text.intValue];
-	self.workoutLog.weight = [NSNumber numberWithInt:self.txtWeight.text.floatValue];
-	self.workoutLog.completed = [NSNumber numberWithBool:YES];
+	if (self.txtRep.text.intValue > 0 || self.txtWeight.text.floatValue > 0)
+	{
+		self.workoutLog.reps = [NSNumber numberWithInt:self.txtRep.text.intValue];
+		self.workoutLog.weight = [NSNumber numberWithInt:self.txtWeight.text.floatValue];
+		self.workoutLog.completed = @YES;
+	}
+	else
+	{
+		self.workoutLog.completed = @NO;
+	}
 	
 	[self.delegate workoutLogDetailViewControllerDidSelectDone];
 }
