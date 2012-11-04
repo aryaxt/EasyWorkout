@@ -13,12 +13,16 @@
 #import "WorkoutLogCell.h"
 #import "WorkoutLogDetailViewController.h"
 #import "UIViewController+Additions.h"
+#import "CKCalendarView.h"
 
-@interface WorkoutLogsViewController : BaseViewController <AddWorkoutLogViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, WorkoutLogDetailViewControllerDelegate>
+@interface WorkoutLogsViewController : BaseViewController <AddWorkoutLogViewControllerDelegate, UITableViewDataSource, UITableViewDelegate, WorkoutLogDetailViewControllerDelegate, CKCalendarDelegate>
 
 @property (nonatomic, strong) WorkoutLogDetailViewController *logDetailViewContorller;
+@property (nonatomic, strong) CKCalendarView *calendarView;
 @property (nonatomic, strong) NSArray *logs;
 @property (nonatomic, strong) NSDate *selectedDate;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+
+- (IBAction)calendarSelected:(id)sender;
 
 @end

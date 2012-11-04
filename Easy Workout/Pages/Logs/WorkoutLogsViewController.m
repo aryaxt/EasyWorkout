@@ -13,22 +13,19 @@
 @synthesize logs = _logs;
 @synthesize selectedDate = _selectedDate;
 @synthesize tableView = _tableView;
+@synthesize calendarView = _calendarView;
 
 #pragma mark - Viewcontroller Methods -
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	self.selectedDate = [NSDate date];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	
-	self.selectedDate = [NSDate date];
-	[self populateData];
-	[self.tableView reloadData];
-	
 	[self.googleAnalyticsHelper trackPage:GoogleAnalyticsHelperPageWorkoutLogs];
 }
 
@@ -41,20 +38,49 @@
 	}
 }
 
+#pragma mark - IBActions -
+
+- (IBAction)calendarSelected:(id)sender
+{
+	[self showCalendar:YES];
+}
+
+#pragma mark - CKCalendarDelegate Methods -
+
+- (void)calendar:(CKCalendarView *)calendar didSelectDate:(NSDate *)date
+{
+	self.selectedDate = date;
+	[self showCalendar:NO];
+}
+
 #pragma mark - Private Methods -
+
+- (void)showCalendar:(BOOL)show
+{
+	[self.view addSubview:self.calendarView];
+	
+	[UIView animateWithDuration:.3 animations:^{
+		self.calendarView.alpha = (show) ? 1 : 0;
+	}];
+}
 
 - (void)populateData
 {
-	NSCalendar *calendar = [NSCalendar currentCalendar];
-	NSDateComponents *components = [calendar components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit
-											   fromDate:self.selectedDate];
+	unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [calendar components:unitFlags fromDate:self.selectedDate];
 	
-	NSDateComponents *oneDay = [[NSDateComponents alloc] init];
-	oneDay.day = 1;
+	//update for the start date
+	[comps setHour:0];
+	[comps setMinute:0];
+	[comps setSecond:0];
+	NSDate *fromDate = [calendar dateFromComponents:comps];
 	
-	// From date  & To date
-	NSDate *fromDate = [calendar dateFromComponents:components];
-	NSDate *toDate = [calendar dateByAddingComponents:oneDay toDate:fromDate options:0];
+	//update for the end date
+	[comps setHour:23];
+	[comps setMinute:59];
+	[comps setSecond:59];
+	NSDate *toDate = [calendar dateFromComponents:comps];
 	
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date >= %@ AND date <= %@", fromDate, toDate];
 	self.logs = [WorkoutLog getInstancesWithPredicate:predicate];
@@ -86,7 +112,7 @@
 		WorkoutLog *pastLog = [self pastLogForWorkout:workout];
 		
 		WorkoutLog *log = [WorkoutLog getInstance];
-		log.date = [NSDate date];
+		log.date = self.selectedDate;
 		log.workout = workout;
 		
 		if (pastLog)
@@ -117,6 +143,11 @@
 
 #pragma mark - UITableView Delegate & Datasrouce -
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+	return 1;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	return self.logs.count;
@@ -129,6 +160,13 @@
 	WorkoutLog *log = [self.logs objectAtIndex:indexPath.row];
 	[cell setWorkoutLog:log];
 	return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setDateStyle:NSDateFormatterFullStyle];
+	return [dateFormatter stringFromDate:self.selectedDate];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -171,6 +209,25 @@
 	}
 	
 	return _logDetailViewContorller;
+}
+
+- (CKCalendarView *)calendarView
+{
+	if (!_calendarView)
+	{
+		_calendarView = [[CKCalendarView alloc] initWithStartDay:startMonday frame:CGRectMake(10, 10, 300, 300)];
+		_calendarView.delegate = self;
+	}
+	
+	return _calendarView;
+}
+
+- (void)setSelectedDate:(NSDate *)selectedDate
+{
+	_selectedDate = selectedDate;
+	
+	[self populateData];
+	[self.tableView reloadData];
 }
 
 @end

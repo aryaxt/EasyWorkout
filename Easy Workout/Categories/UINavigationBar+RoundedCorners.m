@@ -41,14 +41,14 @@ NSInteger ind = 0;
 {
 	[super layoutSubviews];
 	
-	CAShapeLayer *layer = [self.layer.sublayers objectAtIndex:ind];
+	/*CAShapeLayer *layer = [self.layer.sublayers objectAtIndex:ind];
 	
 	CGRect bounds = self.layer.bounds;
 	bounds.size.height += 10.0f;
 	UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:bounds
 												   byRoundingCorners:(UIRectCornerTopLeft | UIRectCornerTopRight)
 														 cornerRadii:CGSizeMake(7.0, 7.0)];
-	layer.path = maskPath.CGPath;
+	layer.path = maskPath.CGPath;*/
 }
 
 

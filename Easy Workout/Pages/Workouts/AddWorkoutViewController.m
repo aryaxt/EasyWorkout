@@ -159,7 +159,7 @@
 - (IBAction)addCategorySelected:(id)sender
 {
 	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Add Workout"
-														message:@"Workout and category names are required"
+														message:@"Please enter a category name."
 													   delegate:self
 											  cancelButtonTitle:@"Cancel"
 											  otherButtonTitles:@"Add", nil];

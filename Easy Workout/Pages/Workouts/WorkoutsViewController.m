@@ -84,7 +84,7 @@
 
 - (void)cellExpandableHeaderViewDidSelectDeleteInSection:(NSInteger)section
 {
-	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Delete Workouts" message:@"Are you sure you want to delete this category and all belonging workouts?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Delete Workouts" message:@"Are you sure you want to delete this category and all its workouts?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
 	alertView.tag = section;
 	[alertView show];
 }

@@ -80,6 +80,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Logs" id="v9X-d8-M6a"/>
                     <navigationItem key="navigationItem" title="Logs" id="F5x-Q1-0bJ">
+                        <barButtonItem key="leftBarButtonItem" image="CalendarBlack.png" width="50" style="plain" id="Qo5-0n-DcY">
+                            <connections>
+                                <action selector="calendarSelected:" destination="jK7-YQ-6vY" id="nTN-XY-46V"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ALt-cd-7cn">
                             <connections>
                                 <segue destination="gLh-5J-HH8" kind="modal" identifier="AddWorkoutLogViewControllerSegue" modalTransitionStyle="flipHorizontal" id="TkU-7a-0AP"/>
@@ -639,6 +644,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CalendarBlack.png" width="20" height="22"/>
         <image name="group.png" width="26" height="20"/>
         <image name="log.png" width="23" height="25"/>
         <image name="workout.png" width="28" height="10"/>
@@ -701,6 +707,7 @@
         <class className="WorkoutLogsViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutLogsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="calendarSelected:"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
