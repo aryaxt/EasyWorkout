@@ -21,6 +21,7 @@
 @property (nonatomic, strong) CKCalendarView *calendarView;
 @property (nonatomic, strong) NSArray *logs;
 @property (nonatomic, strong) NSDate *selectedDate;
+@property (nonatomic, strong) UITapGestureRecognizer *tapRecognizer;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 - (IBAction)calendarSelected:(id)sender;

@@ -22,5 +22,7 @@ typedef enum {
 
 - (void)presentFormSheetViewContorller:(UIViewController *)viewConotrller animated:(BOOL)animated;
 - (void)dismissFormSheetViewControllerAnimated:(BOOL)animated;
+- (void)applicationDidEnterBackground;
+- (void)applicationDidEnterForeground;
 
 @end

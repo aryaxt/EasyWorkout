@@ -14,12 +14,14 @@
 @synthesize selectedDate = _selectedDate;
 @synthesize tableView = _tableView;
 @synthesize calendarView = _calendarView;
+@synthesize tapRecognizer = _tapRecognizer;
 
 #pragma mark - Viewcontroller Methods -
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	
 	self.selectedDate = [NSDate date];
 }
 
@@ -38,11 +40,23 @@
 	}
 }
 
+- (void)applicationDidEnterBackground
+{
+	[super applicationDidEnterBackground];
+	
+	self.selectedDate = [NSDate date];
+}
+
 #pragma mark - IBActions -
 
 - (IBAction)calendarSelected:(id)sender
 {
 	[self showCalendar:YES];
+}
+
+- (void)tapDetected:(UITapGestureRecognizer *)gestureRecognizer
+{
+	[self showCalendar:NO];
 }
 
 #pragma mark - CKCalendarDelegate Methods -
@@ -57,11 +71,24 @@
 
 - (void)showCalendar:(BOOL)show
 {
-	[self.view addSubview:self.calendarView];
+	if (show)
+		[self.view addSubview:self.calendarView];
 	
 	[UIView animateWithDuration:.3 animations:^{
 		self.calendarView.alpha = (show) ? 1 : 0;
+	} completion:^(BOOL finished){
+		if (!show)
+			[self.calendarView removeFromSuperview];
 	}];
+	
+	if (show)
+	{
+		[self.view addGestureRecognizer:self.tapRecognizer];
+	}
+	else
+	{
+		[self.view removeGestureRecognizer:self.tapRecognizer];
+	}
 }
 
 - (void)populateData
@@ -211,6 +238,16 @@
 	return _logDetailViewContorller;
 }
 
+- (UITapGestureRecognizer *)tapRecognizer
+{
+	if (!_tapRecognizer)
+	{
+		_tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected:)];
+	}
+	
+	return _tapRecognizer;
+}
+
 - (CKCalendarView *)calendarView
 {
 	if (!_calendarView)
@@ -225,6 +262,8 @@
 - (void)setSelectedDate:(NSDate *)selectedDate
 {
 	_selectedDate = selectedDate;
+	
+	[self.calendarView setSelectedDate:_selectedDate];
 	
 	[self populateData];
 	[self.tableView reloadData];

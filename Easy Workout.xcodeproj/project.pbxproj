@@ -11,7 +11,8 @@
 		151170F81645B9F400C6EC1D /* left_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 151170F41645B9F400C6EC1D /* left_arrow@2x.png */; };
 		151170F91645B9F400C6EC1D /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 151170F51645B9F400C6EC1D /* right_arrow.png */; };
 		151170FA1645B9F400C6EC1D /* right_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 151170F61645B9F400C6EC1D /* right_arrow@2x.png */; };
-		151171091646E37F00C6EC1D /* CalendarBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 151171081646E37F00C6EC1D /* CalendarBlack.png */; };
+		1511716E1646F38F00C6EC1D /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1511716B1646F2B400C6EC1D /* libCorePlot-CocoaTouch.a */; };
+		151171721646F5F500C6EC1D /* WorkoutsStatsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 151171711646F5F500C6EC1D /* WorkoutsStatsListViewController.m */; };
 		15223DC01645A09800D7532D /* CellExpandableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15223DB41645A09800D7532D /* CellExpandableHeaderView.m */; };
 		15223DC11645A09800D7532D /* CellExpandableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15223DB51645A09800D7532D /* CellExpandableHeaderView.xib */; };
 		15223DC21645A09800D7532D /* CKCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15223DB81645A09800D7532D /* CKCalendarView.m */; };
@@ -78,6 +79,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1511716A1646F2B400C6EC1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 151171611646F2B400C6EC1D /* CorePlot-CocoaTouch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BC9B83470FB8A0A40035D8DA;
+			remoteInfo = "CorePlot-CocoaTouch";
+		};
+		1511716C1646F2ED00C6EC1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 151171611646F2B400C6EC1D /* CorePlot-CocoaTouch.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BC9B83460FB8A0A40035D8DA;
+			remoteInfo = "CorePlot-CocoaTouch";
+		};
 		15C107BA1617EE4200B1B9FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 15C107881617EE4100B1B9FB /* Project object */;
@@ -92,7 +107,9 @@
 		151170F41645B9F400C6EC1D /* left_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left_arrow@2x.png"; sourceTree = "<group>"; };
 		151170F51645B9F400C6EC1D /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
 		151170F61645B9F400C6EC1D /* right_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right_arrow@2x.png"; sourceTree = "<group>"; };
-		151171081646E37F00C6EC1D /* CalendarBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalendarBlack.png; sourceTree = "<group>"; };
+		151171611646F2B400C6EC1D /* CorePlot-CocoaTouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "CorePlot-CocoaTouch.xcodeproj"; path = "Core PLot framework/CorePlot-CocoaTouch.xcodeproj"; sourceTree = "<group>"; };
+		151171701646F5F500C6EC1D /* WorkoutsStatsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutsStatsListViewController.h; sourceTree = "<group>"; };
+		151171711646F5F500C6EC1D /* WorkoutsStatsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutsStatsListViewController.m; sourceTree = "<group>"; };
 		15223DB31645A09800D7532D /* CellExpandableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellExpandableHeaderView.h; sourceTree = "<group>"; };
 		15223DB41645A09800D7532D /* CellExpandableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellExpandableHeaderView.m; sourceTree = "<group>"; };
 		15223DB51645A09800D7532D /* CellExpandableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellExpandableHeaderView.xib; sourceTree = "<group>"; };
@@ -190,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1511716E1646F38F00C6EC1D /* libCorePlot-CocoaTouch.a in Frameworks */,
 				152C611116346CFE000D2110 /* libsqlite3.0.dylib in Frameworks */,
 				152C610F16346CEE000D2110 /* CFNetwork.framework in Frameworks */,
 				152C610D16346C6A000D2110 /* libGoogleAnalytics.a in Frameworks */,
@@ -215,6 +233,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		151171621646F2B400C6EC1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1511716B1646F2B400C6EC1D /* libCorePlot-CocoaTouch.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1511716F1646F5CA00C6EC1D /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				151171701646F5F500C6EC1D /* WorkoutsStatsListViewController.h */,
+				151171711646F5F500C6EC1D /* WorkoutsStatsListViewController.m */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
 		15223DB21645A09800D7532D /* Cell Expandable Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,8 +399,9 @@
 		159284671619AC8700690188 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				15BC03AE162103F90008323C /* Routines */,
 				159C99DA161BE85E00CCAFD9 /* Usable UI */,
+				1511716F1646F5CA00C6EC1D /* Stats */,
+				15BC03AE162103F90008323C /* Routines */,
 				159284781619AC8700690188 /* Workouts */,
 				1592846F1619AC8700690188 /* Logs */,
 				159284681619AC8700690188 /* BaseViewController.h */,
@@ -417,7 +453,6 @@
 				15BC03A21620E1590008323C /* delete.png */,
 				159C99EC161C023C00CCAFD9 /* group.png */,
 				15223DC81645A1E500D7532D /* chart.png */,
-				151171081646E37F00C6EC1D /* CalendarBlack.png */,
 				15223DCA1645A21900D7532D /* calendar.png */,
 				159C99ED161C023C00CCAFD9 /* log.png */,
 				159C99EE161C023C00CCAFD9 /* workout.png */,
@@ -440,6 +475,7 @@
 		15C107861617EE4100B1B9FB = {
 			isa = PBXGroup;
 			children = (
+				151171611646F2B400C6EC1D /* CorePlot-CocoaTouch.xcodeproj */,
 				15752FF11634CD80009EF4B0 /* Default-568h@2x.png */,
 				15752FEF1634CD7C009EF4B0 /* Default@2x.png */,
 				15752FED1634CD76009EF4B0 /* Default.png */,
@@ -490,6 +526,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1511716D1646F2ED00C6EC1D /* PBXTargetDependency */,
 			);
 			name = "Easy Workout";
 			productName = iWorkout;
@@ -534,6 +571,12 @@
 			mainGroup = 15C107861617EE4100B1B9FB;
 			productRefGroup = 15C107921617EE4100B1B9FB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 151171621646F2B400C6EC1D /* Products */;
+					ProjectRef = 151171611646F2B400C6EC1D /* CorePlot-CocoaTouch.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				15C107901617EE4100B1B9FB /* Easy Workout */,
@@ -541,6 +584,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1511716B1646F2B400C6EC1D /* libCorePlot-CocoaTouch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCorePlot-CocoaTouch.a";
+			remoteRef = 1511716A1646F2B400C6EC1D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		15C1078F1617EE4100B1B9FB /* Resources */ = {
@@ -572,7 +625,6 @@
 				151170F81645B9F400C6EC1D /* left_arrow@2x.png in Resources */,
 				151170F91645B9F400C6EC1D /* right_arrow.png in Resources */,
 				151170FA1645B9F400C6EC1D /* right_arrow@2x.png in Resources */,
-				151171091646E37F00C6EC1D /* CalendarBlack.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +687,7 @@
 				15223DC01645A09800D7532D /* CellExpandableHeaderView.m in Sources */,
 				15223DC21645A09800D7532D /* CKCalendarView.m in Sources */,
 				15223DC71645A09800D7532D /* GradientButton.m in Sources */,
+				151171721646F5F500C6EC1D /* WorkoutsStatsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +702,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1511716D1646F2ED00C6EC1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CorePlot-CocoaTouch";
+			targetProxy = 1511716C1646F2ED00C6EC1D /* PBXContainerItemProxy */;
+		};
 		15C107BB1617EE4200B1B9FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 15C107901617EE4100B1B9FB /* Easy Workout */;

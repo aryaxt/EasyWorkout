@@ -80,7 +80,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Logs" id="v9X-d8-M6a"/>
                     <navigationItem key="navigationItem" title="Logs" id="F5x-Q1-0bJ">
-                        <barButtonItem key="leftBarButtonItem" image="CalendarBlack.png" width="50" style="plain" id="Qo5-0n-DcY">
+                        <barButtonItem key="leftBarButtonItem" image="calendar.png" width="50" style="plain" id="Qo5-0n-DcY">
                             <connections>
                                 <action selector="calendarSelected:" destination="jK7-YQ-6vY" id="nTN-XY-46V"/>
                             </connections>
@@ -427,6 +427,37 @@
             </objects>
             <point key="canvasLocation" x="1420" y="365"/>
         </scene>
+        <!--Navigation Controller - Stats-->
+        <scene sceneID="CsD-Us-IWv">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="5uO-mb-8Cu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stats" image="chart.png" id="WDO-2d-L0o"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b2h-pJ-jAR">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wRW-wJ-vbF" kind="relationship" relationship="rootViewController" id="3Yu-Gy-TIr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ghr-2H-gc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640" y="-788"/>
+        </scene>
+        <!--Workouts Stats List View Controller - Stats-->
+        <scene sceneID="6Eh-HT-5hN">
+            <objects>
+                <viewController id="wRW-wJ-vbF" customClass="WorkoutsStatsListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ZY-eH-lPT">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stats" id="Ane-cL-g4T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1af-RQ-pts" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-788"/>
+        </scene>
         <!--Navigation Controller - Workouts-->
         <scene sceneID="dVs-oA-6RD">
             <objects>
@@ -644,7 +675,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CalendarBlack.png" width="20" height="22"/>
+        <image name="calendar.png" width="20" height="20"/>
+        <image name="chart.png" width="29" height="24"/>
         <image name="group.png" width="26" height="20"/>
         <image name="log.png" width="23" height="25"/>
         <image name="workout.png" width="28" height="10"/>
@@ -716,6 +748,9 @@
             <relationships>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
+        </class>
+        <class className="WorkoutsStatsListViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutsStatsListViewController.h"/>
         </class>
         <class className="WorkoutsViewController" superclassName="BaseViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WorkoutsViewController.h"/>

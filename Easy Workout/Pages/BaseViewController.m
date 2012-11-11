@@ -49,6 +49,23 @@ static CGFloat ANIMATION_DURATION = .35;
 											 selector:@selector(keyboardWillHide:)
 												 name:UIKeyboardWillHideNotification
 											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(applicationDidEnterBackground)
+												 name:UIApplicationDidEnterBackgroundNotification
+											   object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(applicationDidEnterForeground)
+												 name:UIApplicationWillEnterForegroundNotification
+											   object:nil];
+}
+
+- (void)viewDidUnload
+{
+	[super viewDidUnload];
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Public Methods -
@@ -119,6 +136,16 @@ static CGFloat ANIMATION_DURATION = .35;
 {
 	self.keyboardIsVisible = NO;
 	[self moveFormSheetAccordingly];
+}
+
+- (void)applicationDidEnterBackground
+{
+	// Do Nothing
+}
+
+- (void)applicationDidEnterForeground
+{
+	// Do Nothing
 }
 
 #pragma mark - Setter & Getter -
