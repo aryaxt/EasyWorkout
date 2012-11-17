@@ -73,6 +73,11 @@
 	[self updateCheckMarkStateForRowAtIndexPath:indexPath];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+	[self.txtRoutineName resignFirstResponder];
+}
+
 #pragma mark - UITextFieldDelegate Methods -
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

@@ -51,7 +51,14 @@
 
 - (IBAction)calendarSelected:(id)sender
 {
-	[self showCalendar:YES];
+	if (self.calendarView.superview)
+	{
+		[self showCalendar:NO];
+	}
+	else
+	{
+		[self showCalendar:YES];
+	}
 }
 
 - (void)tapDetected:(UITapGestureRecognizer *)gestureRecognizer

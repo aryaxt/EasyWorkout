@@ -85,12 +85,19 @@
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-	return self.categories.count;
+	// Workaround for iOS 6 bug
+	if (self.categories.count)
+		return self.categories.count;
+	else
+		return 1;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-	return [[self.categories objectAtIndex:row] name];
+	if (self.categories.count)
+		return [[self.categories objectAtIndex:row] name];
+	else
+		return @"";
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
@@ -136,12 +143,17 @@
 
 - (IBAction)addWorkoutSelected:(id)sender
 {
-	if (self.txtWorkoutName.text.length && self.categories.count)
+	NSInteger index = [self.pickerView selectedRowInComponent:0];
+	WorkoutCategory *category;
+	
+	if (index != NSNotFound && self.categories.count)
+		category = [self.categories objectAtIndex:index];
+	
+	if (self.txtWorkoutName.text.length && category.name.length)
 	{
 		Workout *workout = [Workout getInstance];
 		workout.name = self.txtWorkoutName.text;
-		NSInteger index = [self.pickerView selectedRowInComponent:0];
-		workout.category = [self.categories objectAtIndex:index];
+		workout.category = category;
 		
 		[self dismissModalViewControllerAnimated:YES];
 	}
